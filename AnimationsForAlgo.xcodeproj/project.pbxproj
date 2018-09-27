@@ -1,0 +1,438 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5A600C9F62CBF6D7E15FEC10 /* libPods-AnimationsForAlgo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BDECEBEB3F8BBE836AD89107 /* libPods-AnimationsForAlgo.a */; };
+		AF04C7CD215C890600268882 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AF04C7CC215C890600268882 /* AppDelegate.m */; };
+		AF04C7D0215C890600268882 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF04C7CF215C890600268882 /* ViewController.m */; };
+		AF04C7D3215C890600268882 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF04C7D1215C890600268882 /* Main.storyboard */; };
+		AF04C7D5215C890700268882 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF04C7D4215C890700268882 /* Assets.xcassets */; };
+		AF04C7D8215C890700268882 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF04C7D6215C890700268882 /* LaunchScreen.storyboard */; };
+		AF04C7DB215C890700268882 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AF04C7DA215C890700268882 /* main.m */; };
+		AFF132B3215CAD5600E7CD8C /* SortViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF132B2215CAD5600E7CD8C /* SortViewController.m */; };
+		AFF132B7215CAEED00E7CD8C /* SortViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFF132B6215CAEED00E7CD8C /* SortViewController.xib */; };
+		AFF132BB215CB29300E7CD8C /* BubbleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF132BA215CB29300E7CD8C /* BubbleViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		12FF73D07EF55ACD2DB28990 /* Pods-AnimationsForAlgo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnimationsForAlgo.release.xcconfig"; path = "Pods/Target Support Files/Pods-AnimationsForAlgo/Pods-AnimationsForAlgo.release.xcconfig"; sourceTree = "<group>"; };
+		40A4554C160F678F4EF2832E /* Pods-AnimationsForAlgo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnimationsForAlgo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AnimationsForAlgo/Pods-AnimationsForAlgo.debug.xcconfig"; sourceTree = "<group>"; };
+		AF04C7C8215C890600268882 /* AnimationsForAlgo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimationsForAlgo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF04C7CB215C890600268882 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		AF04C7CC215C890600268882 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		AF04C7CE215C890600268882 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		AF04C7CF215C890600268882 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		AF04C7D2215C890600268882 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AF04C7D4215C890700268882 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AF04C7D7215C890700268882 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AF04C7D9215C890700268882 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF04C7DA215C890700268882 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		AFF132B1215CAD5600E7CD8C /* SortViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SortViewController.h; sourceTree = "<group>"; };
+		AFF132B2215CAD5600E7CD8C /* SortViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SortViewController.m; sourceTree = "<group>"; };
+		AFF132B6215CAEED00E7CD8C /* SortViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SortViewController.xib; sourceTree = "<group>"; };
+		AFF132B9215CB29300E7CD8C /* BubbleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BubbleViewController.h; sourceTree = "<group>"; };
+		AFF132BA215CB29300E7CD8C /* BubbleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BubbleViewController.m; sourceTree = "<group>"; };
+		BDECEBEB3F8BBE836AD89107 /* libPods-AnimationsForAlgo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AnimationsForAlgo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AF04C7C5215C890600268882 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A600C9F62CBF6D7E15FEC10 /* libPods-AnimationsForAlgo.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		570EDD8C363FE44718D82A18 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				40A4554C160F678F4EF2832E /* Pods-AnimationsForAlgo.debug.xcconfig */,
+				12FF73D07EF55ACD2DB28990 /* Pods-AnimationsForAlgo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		AF04C7BF215C890600268882 = {
+			isa = PBXGroup;
+			children = (
+				AF04C7CA215C890600268882 /* AnimationsForAlgo */,
+				AF04C7C9215C890600268882 /* Products */,
+				570EDD8C363FE44718D82A18 /* Pods */,
+				C6FBF80C63B9425C23D23661 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		AF04C7C9215C890600268882 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AF04C7C8215C890600268882 /* AnimationsForAlgo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AF04C7CA215C890600268882 /* AnimationsForAlgo */ = {
+			isa = PBXGroup;
+			children = (
+				AFF132B8215CB28900E7CD8C /* bubble */,
+				AF04C7CB215C890600268882 /* AppDelegate.h */,
+				AF04C7CC215C890600268882 /* AppDelegate.m */,
+				AF04C7CE215C890600268882 /* ViewController.h */,
+				AF04C7CF215C890600268882 /* ViewController.m */,
+				AFF132B1215CAD5600E7CD8C /* SortViewController.h */,
+				AFF132B2215CAD5600E7CD8C /* SortViewController.m */,
+				AFF132B6215CAEED00E7CD8C /* SortViewController.xib */,
+				AF04C7D1215C890600268882 /* Main.storyboard */,
+				AF04C7D4215C890700268882 /* Assets.xcassets */,
+				AF04C7D6215C890700268882 /* LaunchScreen.storyboard */,
+				AF04C7D9215C890700268882 /* Info.plist */,
+				AF04C7DA215C890700268882 /* main.m */,
+			);
+			path = AnimationsForAlgo;
+			sourceTree = "<group>";
+		};
+		AFF132B8215CB28900E7CD8C /* bubble */ = {
+			isa = PBXGroup;
+			children = (
+				AFF132B9215CB29300E7CD8C /* BubbleViewController.h */,
+				AFF132BA215CB29300E7CD8C /* BubbleViewController.m */,
+			);
+			path = bubble;
+			sourceTree = "<group>";
+		};
+		C6FBF80C63B9425C23D23661 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BDECEBEB3F8BBE836AD89107 /* libPods-AnimationsForAlgo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AF04C7C7215C890600268882 /* AnimationsForAlgo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF04C7DE215C890700268882 /* Build configuration list for PBXNativeTarget "AnimationsForAlgo" */;
+			buildPhases = (
+				E76AEE9BC177B7016B048F93 /* [CP] Check Pods Manifest.lock */,
+				AF04C7C4215C890600268882 /* Sources */,
+				AF04C7C5215C890600268882 /* Frameworks */,
+				AF04C7C6215C890600268882 /* Resources */,
+				78193AEAECC40D2415D842BD /* [CP] Embed Pods Frameworks */,
+				A2317CE1B650C22DF8130B69 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AnimationsForAlgo;
+			productName = AnimationsForAlgo;
+			productReference = AF04C7C8215C890600268882 /* AnimationsForAlgo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AF04C7C0215C890600268882 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = "唐鹏";
+				TargetAttributes = {
+					AF04C7C7215C890600268882 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+				};
+			};
+			buildConfigurationList = AF04C7C3215C890600268882 /* Build configuration list for PBXProject "AnimationsForAlgo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AF04C7BF215C890600268882;
+			productRefGroup = AF04C7C9215C890600268882 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AF04C7C7215C890600268882 /* AnimationsForAlgo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AF04C7C6215C890600268882 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF04C7D8215C890700268882 /* LaunchScreen.storyboard in Resources */,
+				AF04C7D5215C890700268882 /* Assets.xcassets in Resources */,
+				AFF132B7215CAEED00E7CD8C /* SortViewController.xib in Resources */,
+				AF04C7D3215C890600268882 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		78193AEAECC40D2415D842BD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AnimationsForAlgo/Pods-AnimationsForAlgo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A2317CE1B650C22DF8130B69 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AnimationsForAlgo/Pods-AnimationsForAlgo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E76AEE9BC177B7016B048F93 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AnimationsForAlgo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AF04C7C4215C890600268882 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF04C7D0215C890600268882 /* ViewController.m in Sources */,
+				AF04C7DB215C890700268882 /* main.m in Sources */,
+				AFF132B3215CAD5600E7CD8C /* SortViewController.m in Sources */,
+				AFF132BB215CB29300E7CD8C /* BubbleViewController.m in Sources */,
+				AF04C7CD215C890600268882 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		AF04C7D1215C890600268882 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AF04C7D2215C890600268882 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AF04C7D6215C890700268882 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AF04C7D7215C890700268882 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AF04C7DC215C890700268882 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		AF04C7DD215C890700268882 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AF04C7DF215C890700268882 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 40A4554C160F678F4EF2832E /* Pods-AnimationsForAlgo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3P2FWDPYWL;
+				INFOPLIST_FILE = AnimationsForAlgo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.allen.AnimationsForAlgo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AF04C7E0215C890700268882 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 12FF73D07EF55ACD2DB28990 /* Pods-AnimationsForAlgo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3P2FWDPYWL;
+				INFOPLIST_FILE = AnimationsForAlgo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.allen.AnimationsForAlgo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AF04C7C3215C890600268882 /* Build configuration list for PBXProject "AnimationsForAlgo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF04C7DC215C890700268882 /* Debug */,
+				AF04C7DD215C890700268882 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AF04C7DE215C890700268882 /* Build configuration list for PBXNativeTarget "AnimationsForAlgo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF04C7DF215C890700268882 /* Debug */,
+				AF04C7E0215C890700268882 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AF04C7C0215C890600268882 /* Project object */;
+}
