@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5A600C9F62CBF6D7E15FEC10 /* libPods-AnimationsForAlgo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BDECEBEB3F8BBE836AD89107 /* libPods-AnimationsForAlgo.a */; };
 		AF04C7CD215C890600268882 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AF04C7CC215C890600268882 /* AppDelegate.m */; };
 		AF04C7D0215C890600268882 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF04C7CF215C890600268882 /* ViewController.m */; };
 		AF04C7D3215C890600268882 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF04C7D1215C890600268882 /* Main.storyboard */; };
@@ -27,8 +26,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		12FF73D07EF55ACD2DB28990 /* Pods-AnimationsForAlgo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnimationsForAlgo.release.xcconfig"; path = "Pods/Target Support Files/Pods-AnimationsForAlgo/Pods-AnimationsForAlgo.release.xcconfig"; sourceTree = "<group>"; };
-		40A4554C160F678F4EF2832E /* Pods-AnimationsForAlgo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnimationsForAlgo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AnimationsForAlgo/Pods-AnimationsForAlgo.debug.xcconfig"; sourceTree = "<group>"; };
 		AF04C7C8215C890600268882 /* AnimationsForAlgo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimationsForAlgo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF04C7CB215C890600268882 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		AF04C7CC215C890600268882 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -67,28 +64,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5A600C9F62CBF6D7E15FEC10 /* libPods-AnimationsForAlgo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		570EDD8C363FE44718D82A18 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				40A4554C160F678F4EF2832E /* Pods-AnimationsForAlgo.debug.xcconfig */,
-				12FF73D07EF55ACD2DB28990 /* Pods-AnimationsForAlgo.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		AF04C7BF215C890600268882 = {
 			isa = PBXGroup;
 			children = (
 				AF04C7CA215C890600268882 /* AnimationsForAlgo */,
 				AF04C7C9215C890600268882 /* Products */,
-				570EDD8C363FE44718D82A18 /* Pods */,
 				C6FBF80C63B9425C23D23661 /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -168,12 +154,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AF04C7DE215C890700268882 /* Build configuration list for PBXNativeTarget "AnimationsForAlgo" */;
 			buildPhases = (
-				E76AEE9BC177B7016B048F93 /* [CP] Check Pods Manifest.lock */,
 				AF04C7C4215C890600268882 /* Sources */,
 				AF04C7C5215C890600268882 /* Frameworks */,
 				AF04C7C6215C890600268882 /* Resources */,
-				78193AEAECC40D2415D842BD /* [CP] Embed Pods Frameworks */,
-				A2317CE1B650C22DF8130B69 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -229,57 +212,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		78193AEAECC40D2415D842BD /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AnimationsForAlgo/Pods-AnimationsForAlgo-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A2317CE1B650C22DF8130B69 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AnimationsForAlgo/Pods-AnimationsForAlgo-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E76AEE9BC177B7016B048F93 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-AnimationsForAlgo-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		AF04C7C4215C890600268882 /* Sources */ = {
@@ -435,7 +367,6 @@
 		};
 		AF04C7DF215C890700268882 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 40A4554C160F678F4EF2832E /* Pods-AnimationsForAlgo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -453,7 +384,6 @@
 		};
 		AF04C7E0215C890700268882 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 12FF73D07EF55ACD2DB28990 /* Pods-AnimationsForAlgo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
