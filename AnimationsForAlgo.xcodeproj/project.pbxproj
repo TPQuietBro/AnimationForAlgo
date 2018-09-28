@@ -26,6 +26,7 @@
 		AFF4C5ED215E2533004CC287 /* InsertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF4C5EC215E2533004CC287 /* InsertViewController.m */; };
 		AFF4C5EF215E257B004CC287 /* update.sh in Resources */ = {isa = PBXBuildFile; fileRef = AFF4C5EE215E257B004CC287 /* update.sh */; };
 		AFF4C5F5215E27EB004CC287 /* BaseAlgoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF4C5F4215E27EB004CC287 /* BaseAlgoViewController.m */; };
+		D734D148215E758800D51599 /* SelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D734D147215E758800D51599 /* SelectViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +67,8 @@
 		AFF4C5F3215E27EB004CC287 /* BaseAlgoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseAlgoViewController.h; sourceTree = "<group>"; };
 		AFF4C5F4215E27EB004CC287 /* BaseAlgoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseAlgoViewController.m; sourceTree = "<group>"; };
 		BDECEBEB3F8BBE836AD89107 /* libPods-AnimationsForAlgo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AnimationsForAlgo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D734D146215E758800D51599 /* SelectViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SelectViewController.h; sourceTree = "<group>"; };
+		D734D147215E758800D51599 /* SelectViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SelectViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +106,7 @@
 		AF04C7CA215C890600268882 /* AnimationsForAlgo */ = {
 			isa = PBXGroup;
 			children = (
+				D734D145215E757900D51599 /* select */,
 				AFF4C5EA215E2522004CC287 /* insert */,
 				AFF132B8215CB28900E7CD8C /* bubble */,
 				AF04C7CB215C890600268882 /* AppDelegate.h */,
@@ -186,6 +190,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D734D145215E757900D51599 /* select */ = {
+			isa = PBXGroup;
+			children = (
+				D734D146215E758800D51599 /* SelectViewController.h */,
+				D734D147215E758800D51599 /* SelectViewController.m */,
+			);
+			path = select;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -261,6 +274,7 @@
 				AFF4C5E9215DBA5D004CC287 /* UIView+TPFrameExtension.m in Sources */,
 				AF04C7D0215C890600268882 /* ViewController.m in Sources */,
 				AFF4C5ED215E2533004CC287 /* InsertViewController.m in Sources */,
+				D734D148215E758800D51599 /* SelectViewController.m in Sources */,
 				AFF4C5E8215DBA5D004CC287 /* TPScreenAdaptor.m in Sources */,
 				AFF4C5E4215DBA5D004CC287 /* UILabel+FastSetting.m in Sources */,
 				AFF4C5E5215DBA5D004CC287 /* UIButton+TPCustom.m in Sources */,

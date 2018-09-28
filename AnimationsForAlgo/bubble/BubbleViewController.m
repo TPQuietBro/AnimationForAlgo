@@ -15,10 +15,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationItem.title = @"bubble";
+    self.navigationItem.title = @"Bubble";
 }
-static NSInteger i = 0;
-static NSInteger j = 0;
+
 - (void)beginAnimation{
     if (j == self.examples.count - 1) {
         [self afterSorted];

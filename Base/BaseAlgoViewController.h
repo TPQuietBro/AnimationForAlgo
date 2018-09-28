@@ -10,6 +10,10 @@
 #import "TAlgoProtocol.h"
 
 #define Duration [self duration] > 0 ? : 0.5
+
+static NSInteger i = 0;
+static NSInteger j = 0;
+
 @interface BaseAlgoViewController : UIViewController<TAlgoProtocol>
 @property (nonatomic, strong) NSMutableArray *examples;
 @property (nonatomic, strong) NSMutableArray *labels;
