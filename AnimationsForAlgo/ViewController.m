@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "SortViewController.h"
+#include<math.h>
 
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -15,7 +16,6 @@
 @end
 static NSString *const ID = @"UITableViewCell";
 @implementation ViewController
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.title = @"所有类别";

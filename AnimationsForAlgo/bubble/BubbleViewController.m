@@ -13,7 +13,7 @@
 @property (nonatomic, strong) NSMutableArray *labels;
 @property (nonatomic, strong) NSTimer *timer;
 @end
-
+static NSTimeInterval duration = 0.5;
 @implementation BubbleViewController
 
 - (void)viewDidLoad {
@@ -23,24 +23,25 @@
     _examples = [@[@"49",@"38",@"65",@"97",@"76",@"13",@"27",@"49",@"55",@"04"] mutableCopy];
     [self initLabels];
 //    [self sort];
-    [self afterSorted];
     [self startTimer];
 }
 
 - (void)startTimer{
-    NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(beginAn) userInfo:nil repeats:YES];
+    NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(beginAnimation) userInfo:nil repeats:YES];
     [[NSRunLoop currentRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
+    _timer = timer;
 }
 NSInteger i = 0;
 NSInteger j = 0;
-- (void)beginAn{
+- (void)beginAnimation{
     if (j == self.examples.count - 1) {
+        [self afterSorted];
         return;
     }
     if (i == self.examples.count - j - 1) {
         i = 0;
         j ++;
-        [self setLabelBg];
+        [self reSetLabelBg];
         return;
     }
     UILabel *label = self.labels[i];
@@ -51,7 +52,7 @@ NSInteger j = 0;
     }
     if ([self.examples[i] integerValue] > [self.examples[i+1] integerValue]) {
         [self fireTimer];
-        [UIView animateWithDuration:1 animations:^{
+        [UIView animateWithDuration:duration animations:^{
             [self swapArray:self.examples firstIndex:i secondIndex:i+1];
         }completion:^(BOOL finished) {
             [self startTimer];
@@ -60,7 +61,7 @@ NSInteger j = 0;
     i++;
 }
 
-- (void)setLabelBg{
+- (void)reSetLabelBg{
     for (UILabel *label in self.labels) {
         label.backgroundColor = [UIColor whiteColor];
     }
