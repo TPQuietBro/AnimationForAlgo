@@ -23,6 +23,8 @@
 		AFF4C5E7215DBA5D004CC287 /* TPCustomLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF4C5DE215DBA5D004CC287 /* TPCustomLabel.m */; };
 		AFF4C5E8215DBA5D004CC287 /* TPScreenAdaptor.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF4C5DF215DBA5D004CC287 /* TPScreenAdaptor.m */; };
 		AFF4C5E9215DBA5D004CC287 /* UIView+TPFrameExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF4C5E1215DBA5D004CC287 /* UIView+TPFrameExtension.m */; };
+		AFF4C5ED215E2533004CC287 /* InsertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF4C5EC215E2533004CC287 /* InsertViewController.m */; };
+		AFF4C5EF215E257B004CC287 /* update.sh in Resources */ = {isa = PBXBuildFile; fileRef = AFF4C5EE215E257B004CC287 /* update.sh */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +58,9 @@
 		AFF4C5E0215DBA5D004CC287 /* UILabel+FastSetting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+FastSetting.h"; sourceTree = "<group>"; };
 		AFF4C5E1215DBA5D004CC287 /* UIView+TPFrameExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+TPFrameExtension.m"; sourceTree = "<group>"; };
 		AFF4C5E2215DBA5D004CC287 /* UIButton+TPCustom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+TPCustom.h"; sourceTree = "<group>"; };
+		AFF4C5EB215E2533004CC287 /* InsertViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InsertViewController.h; sourceTree = "<group>"; };
+		AFF4C5EC215E2533004CC287 /* InsertViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InsertViewController.m; sourceTree = "<group>"; };
+		AFF4C5EE215E257B004CC287 /* update.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = update.sh; sourceTree = "<group>"; };
 		BDECEBEB3F8BBE836AD89107 /* libPods-AnimationsForAlgo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AnimationsForAlgo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -73,6 +78,8 @@
 		AF04C7BF215C890600268882 = {
 			isa = PBXGroup;
 			children = (
+				AFF4C5EE215E257B004CC287 /* update.sh */,
+				AFF4C5D3215DBA5D004CC287 /* Util */,
 				AF04C7CA215C890600268882 /* AnimationsForAlgo */,
 				AF04C7C9215C890600268882 /* Products */,
 				C6FBF80C63B9425C23D23661 /* Frameworks */,
@@ -90,7 +97,7 @@
 		AF04C7CA215C890600268882 /* AnimationsForAlgo */ = {
 			isa = PBXGroup;
 			children = (
-				AFF4C5D3215DBA5D004CC287 /* Util */,
+				AFF4C5EA215E2522004CC287 /* insert */,
 				AFF132B8215CB28900E7CD8C /* bubble */,
 				AF04C7CB215C890600268882 /* AppDelegate.h */,
 				AF04C7CC215C890600268882 /* AppDelegate.m */,
@@ -137,6 +144,15 @@
 				AFF4C5E2215DBA5D004CC287 /* UIButton+TPCustom.h */,
 			);
 			path = Util;
+			sourceTree = "<group>";
+		};
+		AFF4C5EA215E2522004CC287 /* insert */ = {
+			isa = PBXGroup;
+			children = (
+				AFF4C5EB215E2533004CC287 /* InsertViewController.h */,
+				AFF4C5EC215E2533004CC287 /* InsertViewController.m */,
+			);
+			path = insert;
 			sourceTree = "<group>";
 		};
 		C6FBF80C63B9425C23D23661 /* Frameworks */ = {
@@ -206,6 +222,7 @@
 			files = (
 				AF04C7D8215C890700268882 /* LaunchScreen.storyboard in Resources */,
 				AF04C7D5215C890700268882 /* Assets.xcassets in Resources */,
+				AFF4C5EF215E257B004CC287 /* update.sh in Resources */,
 				AFF132B7215CAEED00E7CD8C /* SortViewController.xib in Resources */,
 				AF04C7D3215C890600268882 /* Main.storyboard in Resources */,
 			);
@@ -220,6 +237,7 @@
 			files = (
 				AFF4C5E9215DBA5D004CC287 /* UIView+TPFrameExtension.m in Sources */,
 				AF04C7D0215C890600268882 /* ViewController.m in Sources */,
+				AFF4C5ED215E2533004CC287 /* InsertViewController.m in Sources */,
 				AFF4C5E8215DBA5D004CC287 /* TPScreenAdaptor.m in Sources */,
 				AFF4C5E4215DBA5D004CC287 /* UILabel+FastSetting.m in Sources */,
 				AFF4C5E5215DBA5D004CC287 /* UIButton+TPCustom.m in Sources */,
