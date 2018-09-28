@@ -27,7 +27,7 @@ static NSTimeInterval duration = 0.5;
 }
 
 - (void)startTimer{
-    NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(beginAnimation) userInfo:nil repeats:YES];
+    NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:duration target:self selector:@selector(beginAnimation) userInfo:nil repeats:YES];
     [[NSRunLoop currentRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
     _timer = timer;
 }
@@ -36,6 +36,7 @@ NSInteger j = 0;
 - (void)beginAnimation{
     if (j == self.examples.count - 1) {
         [self afterSorted];
+        [self fireTimer];
         return;
     }
     if (i == self.examples.count - j - 1) {
