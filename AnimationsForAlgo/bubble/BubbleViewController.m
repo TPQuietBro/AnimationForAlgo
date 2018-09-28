@@ -90,11 +90,7 @@ NSInteger j = 0;
     for (NSInteger i = 0; i < self.examples.count; ++i) {
         for (NSInteger j = 0; j < self.examples.count - 1 - i; ++j) {
             if ([self.examples[j] integerValue] > [self.examples[j+1] integerValue]) {
-                [UIView animateWithDuration:1 animations:^{
-                    [self swapArray:self.examples firstIndex:j secondIndex:j+1];
-                } completion:^(BOOL finished) {
-                    sleep(1);
-                }];
+                [self swapArray:self.examples firstIndex:j secondIndex:j+1];
             }
         }
     }
@@ -114,10 +110,10 @@ NSInteger j = 0;
     array[first] = array[second];
     array[second] = temp;
     
-    [self animationWithFirstIndex:first secondIndex:second];
+    [self swapLabelWithFirstIndex:first secondIndex:second];
 }
 
-- (void)animationWithFirstIndex:(NSInteger)first secondIndex:(NSInteger)second{
+- (void)swapLabelWithFirstIndex:(NSInteger)first secondIndex:(NSInteger)second{
 
     UILabel *firstLabel = self.labels[first];
     UILabel *secondLabel = self.labels[second];
