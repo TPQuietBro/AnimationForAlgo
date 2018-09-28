@@ -8,6 +8,7 @@
 
 #import "SortViewController.h"
 #import "BubbleViewController.h"
+#import "InsertViewController.h"
 
 @interface SortViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tabelView;
@@ -36,6 +37,8 @@ static NSString *const ID = @"id";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.row == 0) {
         [self.navigationController pushViewController:[BubbleViewController new] animated:YES];
+    } else if (indexPath.row == 1){
+        [self.navigationController pushViewController:[InsertViewController new] animated:YES];
     }
 }
 

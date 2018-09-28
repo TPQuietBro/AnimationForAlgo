@@ -6,8 +6,8 @@
 //  Copyright © 2018 唐鹏. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "BaseAlgoViewController.h"
 
-@interface InsertViewController : UIViewController
+@interface InsertViewController : BaseAlgoViewController
 
 @end

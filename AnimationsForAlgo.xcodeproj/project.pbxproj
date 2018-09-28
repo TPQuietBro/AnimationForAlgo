@@ -25,6 +25,7 @@
 		AFF4C5E9215DBA5D004CC287 /* UIView+TPFrameExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF4C5E1215DBA5D004CC287 /* UIView+TPFrameExtension.m */; };
 		AFF4C5ED215E2533004CC287 /* InsertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF4C5EC215E2533004CC287 /* InsertViewController.m */; };
 		AFF4C5EF215E257B004CC287 /* update.sh in Resources */ = {isa = PBXBuildFile; fileRef = AFF4C5EE215E257B004CC287 /* update.sh */; };
+		AFF4C5F5215E27EB004CC287 /* BaseAlgoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF4C5F4215E27EB004CC287 /* BaseAlgoViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +62,9 @@
 		AFF4C5EB215E2533004CC287 /* InsertViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InsertViewController.h; sourceTree = "<group>"; };
 		AFF4C5EC215E2533004CC287 /* InsertViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InsertViewController.m; sourceTree = "<group>"; };
 		AFF4C5EE215E257B004CC287 /* update.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = update.sh; sourceTree = "<group>"; };
+		AFF4C5F1215E2720004CC287 /* TAlgoProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TAlgoProtocol.h; sourceTree = "<group>"; };
+		AFF4C5F3215E27EB004CC287 /* BaseAlgoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseAlgoViewController.h; sourceTree = "<group>"; };
+		AFF4C5F4215E27EB004CC287 /* BaseAlgoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseAlgoViewController.m; sourceTree = "<group>"; };
 		BDECEBEB3F8BBE836AD89107 /* libPods-AnimationsForAlgo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AnimationsForAlgo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -79,6 +83,8 @@
 			isa = PBXGroup;
 			children = (
 				AFF4C5EE215E257B004CC287 /* update.sh */,
+				AFF4C5F2215E27E0004CC287 /* Base */,
+				AFF4C5F0215E2713004CC287 /* Protocol */,
 				AFF4C5D3215DBA5D004CC287 /* Util */,
 				AF04C7CA215C890600268882 /* AnimationsForAlgo */,
 				AF04C7C9215C890600268882 /* Products */,
@@ -153,6 +159,23 @@
 				AFF4C5EC215E2533004CC287 /* InsertViewController.m */,
 			);
 			path = insert;
+			sourceTree = "<group>";
+		};
+		AFF4C5F0215E2713004CC287 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				AFF4C5F1215E2720004CC287 /* TAlgoProtocol.h */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		AFF4C5F2215E27E0004CC287 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				AFF4C5F3215E27EB004CC287 /* BaseAlgoViewController.h */,
+				AFF4C5F4215E27EB004CC287 /* BaseAlgoViewController.m */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 		C6FBF80C63B9425C23D23661 /* Frameworks */ = {
@@ -243,6 +266,7 @@
 				AFF4C5E5215DBA5D004CC287 /* UIButton+TPCustom.m in Sources */,
 				AF04C7DB215C890700268882 /* main.m in Sources */,
 				AFF4C5E3215DBA5D004CC287 /* TPCustomButton.m in Sources */,
+				AFF4C5F5215E27EB004CC287 /* BaseAlgoViewController.m in Sources */,
 				AFF4C5E6215DBA5D004CC287 /* UIView+WalkerFrame.m in Sources */,
 				AFF132B3215CAD5600E7CD8C /* SortViewController.m in Sources */,
 				AFF4C5E7215DBA5D004CC287 /* TPCustomLabel.m in Sources */,
