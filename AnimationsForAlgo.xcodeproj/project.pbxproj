@@ -17,6 +17,13 @@
 		AFF132B3215CAD5600E7CD8C /* SortViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF132B2215CAD5600E7CD8C /* SortViewController.m */; };
 		AFF132B7215CAEED00E7CD8C /* SortViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFF132B6215CAEED00E7CD8C /* SortViewController.xib */; };
 		AFF132BB215CB29300E7CD8C /* BubbleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF132BA215CB29300E7CD8C /* BubbleViewController.m */; };
+		AFF4C5E3215DBA5D004CC287 /* TPCustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF4C5D5215DBA5D004CC287 /* TPCustomButton.m */; };
+		AFF4C5E4215DBA5D004CC287 /* UILabel+FastSetting.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF4C5D6215DBA5D004CC287 /* UILabel+FastSetting.m */; };
+		AFF4C5E5215DBA5D004CC287 /* UIButton+TPCustom.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF4C5DA215DBA5D004CC287 /* UIButton+TPCustom.m */; };
+		AFF4C5E6215DBA5D004CC287 /* UIView+WalkerFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF4C5DD215DBA5D004CC287 /* UIView+WalkerFrame.m */; };
+		AFF4C5E7215DBA5D004CC287 /* TPCustomLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF4C5DE215DBA5D004CC287 /* TPCustomLabel.m */; };
+		AFF4C5E8215DBA5D004CC287 /* TPScreenAdaptor.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF4C5DF215DBA5D004CC287 /* TPScreenAdaptor.m */; };
+		AFF4C5E9215DBA5D004CC287 /* UIView+TPFrameExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF4C5E1215DBA5D004CC287 /* UIView+TPFrameExtension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +44,21 @@
 		AFF132B6215CAEED00E7CD8C /* SortViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SortViewController.xib; sourceTree = "<group>"; };
 		AFF132B9215CB29300E7CD8C /* BubbleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BubbleViewController.h; sourceTree = "<group>"; };
 		AFF132BA215CB29300E7CD8C /* BubbleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BubbleViewController.m; sourceTree = "<group>"; };
+		AFF4C5D4215DBA5D004CC287 /* UIView+WalkerFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WalkerFrame.h"; sourceTree = "<group>"; };
+		AFF4C5D5215DBA5D004CC287 /* TPCustomButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPCustomButton.m; sourceTree = "<group>"; };
+		AFF4C5D6215DBA5D004CC287 /* UILabel+FastSetting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+FastSetting.m"; sourceTree = "<group>"; };
+		AFF4C5D7215DBA5D004CC287 /* TPScreenAdaptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPScreenAdaptor.h; sourceTree = "<group>"; };
+		AFF4C5D8215DBA5D004CC287 /* TPCustomLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPCustomLabel.h; sourceTree = "<group>"; };
+		AFF4C5D9215DBA5D004CC287 /* UIView+TPFrameExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+TPFrameExtension.h"; sourceTree = "<group>"; };
+		AFF4C5DA215DBA5D004CC287 /* UIButton+TPCustom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+TPCustom.m"; sourceTree = "<group>"; };
+		AFF4C5DB215DBA5D004CC287 /* TPFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPFrame.h; sourceTree = "<group>"; };
+		AFF4C5DC215DBA5D004CC287 /* TPCustomButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPCustomButton.h; sourceTree = "<group>"; };
+		AFF4C5DD215DBA5D004CC287 /* UIView+WalkerFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WalkerFrame.m"; sourceTree = "<group>"; };
+		AFF4C5DE215DBA5D004CC287 /* TPCustomLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPCustomLabel.m; sourceTree = "<group>"; };
+		AFF4C5DF215DBA5D004CC287 /* TPScreenAdaptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPScreenAdaptor.m; sourceTree = "<group>"; };
+		AFF4C5E0215DBA5D004CC287 /* UILabel+FastSetting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+FastSetting.h"; sourceTree = "<group>"; };
+		AFF4C5E1215DBA5D004CC287 /* UIView+TPFrameExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+TPFrameExtension.m"; sourceTree = "<group>"; };
+		AFF4C5E2215DBA5D004CC287 /* UIButton+TPCustom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+TPCustom.h"; sourceTree = "<group>"; };
 		BDECEBEB3F8BBE836AD89107 /* libPods-AnimationsForAlgo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AnimationsForAlgo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -82,6 +104,7 @@
 		AF04C7CA215C890600268882 /* AnimationsForAlgo */ = {
 			isa = PBXGroup;
 			children = (
+				AFF4C5D3215DBA5D004CC287 /* Util */,
 				AFF132B8215CB28900E7CD8C /* bubble */,
 				AF04C7CB215C890600268882 /* AppDelegate.h */,
 				AF04C7CC215C890600268882 /* AppDelegate.m */,
@@ -106,6 +129,28 @@
 				AFF132BA215CB29300E7CD8C /* BubbleViewController.m */,
 			);
 			path = bubble;
+			sourceTree = "<group>";
+		};
+		AFF4C5D3215DBA5D004CC287 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				AFF4C5D4215DBA5D004CC287 /* UIView+WalkerFrame.h */,
+				AFF4C5D5215DBA5D004CC287 /* TPCustomButton.m */,
+				AFF4C5D6215DBA5D004CC287 /* UILabel+FastSetting.m */,
+				AFF4C5D7215DBA5D004CC287 /* TPScreenAdaptor.h */,
+				AFF4C5D8215DBA5D004CC287 /* TPCustomLabel.h */,
+				AFF4C5D9215DBA5D004CC287 /* UIView+TPFrameExtension.h */,
+				AFF4C5DA215DBA5D004CC287 /* UIButton+TPCustom.m */,
+				AFF4C5DB215DBA5D004CC287 /* TPFrame.h */,
+				AFF4C5DC215DBA5D004CC287 /* TPCustomButton.h */,
+				AFF4C5DD215DBA5D004CC287 /* UIView+WalkerFrame.m */,
+				AFF4C5DE215DBA5D004CC287 /* TPCustomLabel.m */,
+				AFF4C5DF215DBA5D004CC287 /* TPScreenAdaptor.m */,
+				AFF4C5E0215DBA5D004CC287 /* UILabel+FastSetting.h */,
+				AFF4C5E1215DBA5D004CC287 /* UIView+TPFrameExtension.m */,
+				AFF4C5E2215DBA5D004CC287 /* UIButton+TPCustom.h */,
+			);
+			path = Util;
 			sourceTree = "<group>";
 		};
 		C6FBF80C63B9425C23D23661 /* Frameworks */ = {
@@ -241,9 +286,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFF4C5E9215DBA5D004CC287 /* UIView+TPFrameExtension.m in Sources */,
 				AF04C7D0215C890600268882 /* ViewController.m in Sources */,
+				AFF4C5E8215DBA5D004CC287 /* TPScreenAdaptor.m in Sources */,
+				AFF4C5E4215DBA5D004CC287 /* UILabel+FastSetting.m in Sources */,
+				AFF4C5E5215DBA5D004CC287 /* UIButton+TPCustom.m in Sources */,
 				AF04C7DB215C890700268882 /* main.m in Sources */,
+				AFF4C5E3215DBA5D004CC287 /* TPCustomButton.m in Sources */,
+				AFF4C5E6215DBA5D004CC287 /* UIView+WalkerFrame.m in Sources */,
 				AFF132B3215CAD5600E7CD8C /* SortViewController.m in Sources */,
+				AFF4C5E7215DBA5D004CC287 /* TPCustomLabel.m in Sources */,
 				AFF132BB215CB29300E7CD8C /* BubbleViewController.m in Sources */,
 				AF04C7CD215C890600268882 /* AppDelegate.m in Sources */,
 			);
@@ -389,7 +441,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3P2FWDPYWL;
 				INFOPLIST_FILE = AnimationsForAlgo/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.allen.AnimationsForAlgo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -404,7 +459,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3P2FWDPYWL;
 				INFOPLIST_FILE = AnimationsForAlgo/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.allen.AnimationsForAlgo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";

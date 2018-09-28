@@ -7,7 +7,7 @@
 //
 
 #import "BubbleViewController.h"
-#import <UILabel+FastSetting.h>
+#import "UILabel+FastSetting.h"
 @interface BubbleViewController ()
 @property (nonatomic, strong) NSMutableArray *examples;
 @property (nonatomic, strong) NSMutableArray *labels;
