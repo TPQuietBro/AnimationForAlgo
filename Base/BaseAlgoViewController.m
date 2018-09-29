@@ -20,6 +20,10 @@
     [self startTimer];
 }
 
+- (void)dealloc{
+    [self fireTimer];
+}
+
 - (void)initLabels{
     CGFloat width = 25;
     CGFloat height = 35;

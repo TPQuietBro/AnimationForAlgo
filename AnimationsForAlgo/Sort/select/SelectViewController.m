@@ -21,12 +21,12 @@
 
 - (void)beginAnimation{
     __block NSInteger min = j;
-    if (j == self.examples.count) {
+    if (j == Count) {
         [self afterSorted];
         [self fireTimer];
         return;
     }
-    if (i == self.examples.count) {
+    if (i == Count) {
         i = j+1;
         j ++;
         [self reSetLabelBg];

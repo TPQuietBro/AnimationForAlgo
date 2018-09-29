@@ -10,6 +10,7 @@
 #import "BubbleViewController.h"
 #import "InsertViewController.h"
 #import "SelectViewController.h"
+#import "ShellViewController.h"
 
 @interface SortViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tabelView;
@@ -42,6 +43,8 @@ static NSString *const ID = @"id";
         [self.navigationController pushViewController:[InsertViewController new] animated:YES];
     } else if (indexPath.row == 2){
         [self.navigationController pushViewController:[SelectViewController new] animated:YES];
+    } else if (indexPath.row == 3){
+        [self.navigationController pushViewController:[ShellViewController new] animated:YES];
     }
 }
 
