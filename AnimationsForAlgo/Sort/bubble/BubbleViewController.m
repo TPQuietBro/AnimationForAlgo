@@ -19,12 +19,12 @@
 }
 
 - (void)beginAnimation{
-    if (j == self.examples.count - 1) {
+    if (j == Count - 1) {
         [self afterSorted];
         [self fireTimer];
         return;
     }
-    if (i == self.examples.count - j - 1) {
+    if (i == Count - j - 1) {
         i = 0;
         j ++;
         [self reSetLabelBg];
@@ -47,8 +47,8 @@
     i++;
 }
 - (void)sort{
-    for (NSInteger i = 0; i < self.examples.count; ++i) {
-        for (NSInteger j = 0; j < self.examples.count - 1 - i; ++j) {
+    for (NSInteger i = 0; i < Count; ++i) {
+        for (NSInteger j = 0; j < Count - 1 - i; ++j) {
             if ([self.examples[j] integerValue] > [self.examples[j+1] integerValue]) {
                 [self swapArray:self.examples firstIndex:j secondIndex:j+1];
             }

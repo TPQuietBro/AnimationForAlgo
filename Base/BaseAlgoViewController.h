@@ -10,6 +10,7 @@
 #import "TAlgoProtocol.h"
 
 #define Duration [self duration] > 0 ? : 0.5
+#define Count self.examples.count
 
 static NSInteger i = 0;
 static NSInteger j = 0;

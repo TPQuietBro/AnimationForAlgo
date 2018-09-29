@@ -13,9 +13,12 @@
 		AF04C7D5215C890700268882 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF04C7D4215C890700268882 /* Assets.xcassets */; };
 		AF04C7D8215C890700268882 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF04C7D6215C890700268882 /* LaunchScreen.storyboard */; };
 		AF04C7DB215C890700268882 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AF04C7DA215C890700268882 /* main.m */; };
+		AF4D8F8B215F6621003B505D /* InsertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF4D8F84215F6621003B505D /* InsertViewController.m */; };
+		AF4D8F8C215F6621003B505D /* BubbleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF4D8F86215F6621003B505D /* BubbleViewController.m */; };
+		AF4D8F8D215F6621003B505D /* SelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF4D8F8A215F6621003B505D /* SelectViewController.m */; };
+		AF4D8F91215F66AB003B505D /* ShellViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF4D8F90215F66AB003B505D /* ShellViewController.m */; };
 		AFF132B3215CAD5600E7CD8C /* SortViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF132B2215CAD5600E7CD8C /* SortViewController.m */; };
 		AFF132B7215CAEED00E7CD8C /* SortViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFF132B6215CAEED00E7CD8C /* SortViewController.xib */; };
-		AFF132BB215CB29300E7CD8C /* BubbleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF132BA215CB29300E7CD8C /* BubbleViewController.m */; };
 		AFF4C5E3215DBA5D004CC287 /* TPCustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF4C5D5215DBA5D004CC287 /* TPCustomButton.m */; };
 		AFF4C5E4215DBA5D004CC287 /* UILabel+FastSetting.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF4C5D6215DBA5D004CC287 /* UILabel+FastSetting.m */; };
 		AFF4C5E5215DBA5D004CC287 /* UIButton+TPCustom.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF4C5DA215DBA5D004CC287 /* UIButton+TPCustom.m */; };
@@ -23,10 +26,8 @@
 		AFF4C5E7215DBA5D004CC287 /* TPCustomLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF4C5DE215DBA5D004CC287 /* TPCustomLabel.m */; };
 		AFF4C5E8215DBA5D004CC287 /* TPScreenAdaptor.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF4C5DF215DBA5D004CC287 /* TPScreenAdaptor.m */; };
 		AFF4C5E9215DBA5D004CC287 /* UIView+TPFrameExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF4C5E1215DBA5D004CC287 /* UIView+TPFrameExtension.m */; };
-		AFF4C5ED215E2533004CC287 /* InsertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF4C5EC215E2533004CC287 /* InsertViewController.m */; };
 		AFF4C5EF215E257B004CC287 /* update.sh in Resources */ = {isa = PBXBuildFile; fileRef = AFF4C5EE215E257B004CC287 /* update.sh */; };
 		AFF4C5F5215E27EB004CC287 /* BaseAlgoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF4C5F4215E27EB004CC287 /* BaseAlgoViewController.m */; };
-		D734D148215E758800D51599 /* SelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D734D147215E758800D51599 /* SelectViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,11 +41,17 @@
 		AF04C7D7215C890700268882 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AF04C7D9215C890700268882 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF04C7DA215C890700268882 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		AF4D8F83215F6621003B505D /* InsertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InsertViewController.h; sourceTree = "<group>"; };
+		AF4D8F84215F6621003B505D /* InsertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InsertViewController.m; sourceTree = "<group>"; };
+		AF4D8F86215F6621003B505D /* BubbleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BubbleViewController.m; sourceTree = "<group>"; };
+		AF4D8F87215F6621003B505D /* BubbleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BubbleViewController.h; sourceTree = "<group>"; };
+		AF4D8F89215F6621003B505D /* SelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectViewController.h; sourceTree = "<group>"; };
+		AF4D8F8A215F6621003B505D /* SelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectViewController.m; sourceTree = "<group>"; };
+		AF4D8F8F215F66AB003B505D /* ShellViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShellViewController.h; sourceTree = "<group>"; };
+		AF4D8F90215F66AB003B505D /* ShellViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShellViewController.m; sourceTree = "<group>"; };
 		AFF132B1215CAD5600E7CD8C /* SortViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SortViewController.h; sourceTree = "<group>"; };
 		AFF132B2215CAD5600E7CD8C /* SortViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SortViewController.m; sourceTree = "<group>"; };
 		AFF132B6215CAEED00E7CD8C /* SortViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SortViewController.xib; sourceTree = "<group>"; };
-		AFF132B9215CB29300E7CD8C /* BubbleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BubbleViewController.h; sourceTree = "<group>"; };
-		AFF132BA215CB29300E7CD8C /* BubbleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BubbleViewController.m; sourceTree = "<group>"; };
 		AFF4C5D4215DBA5D004CC287 /* UIView+WalkerFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WalkerFrame.h"; sourceTree = "<group>"; };
 		AFF4C5D5215DBA5D004CC287 /* TPCustomButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPCustomButton.m; sourceTree = "<group>"; };
 		AFF4C5D6215DBA5D004CC287 /* UILabel+FastSetting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+FastSetting.m"; sourceTree = "<group>"; };
@@ -60,15 +67,11 @@
 		AFF4C5E0215DBA5D004CC287 /* UILabel+FastSetting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+FastSetting.h"; sourceTree = "<group>"; };
 		AFF4C5E1215DBA5D004CC287 /* UIView+TPFrameExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+TPFrameExtension.m"; sourceTree = "<group>"; };
 		AFF4C5E2215DBA5D004CC287 /* UIButton+TPCustom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+TPCustom.h"; sourceTree = "<group>"; };
-		AFF4C5EB215E2533004CC287 /* InsertViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InsertViewController.h; sourceTree = "<group>"; };
-		AFF4C5EC215E2533004CC287 /* InsertViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InsertViewController.m; sourceTree = "<group>"; };
 		AFF4C5EE215E257B004CC287 /* update.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = update.sh; sourceTree = "<group>"; };
 		AFF4C5F1215E2720004CC287 /* TAlgoProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TAlgoProtocol.h; sourceTree = "<group>"; };
 		AFF4C5F3215E27EB004CC287 /* BaseAlgoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseAlgoViewController.h; sourceTree = "<group>"; };
 		AFF4C5F4215E27EB004CC287 /* BaseAlgoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseAlgoViewController.m; sourceTree = "<group>"; };
 		BDECEBEB3F8BBE836AD89107 /* libPods-AnimationsForAlgo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AnimationsForAlgo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D734D146215E758800D51599 /* SelectViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SelectViewController.h; sourceTree = "<group>"; };
-		D734D147215E758800D51599 /* SelectViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SelectViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,9 +109,7 @@
 		AF04C7CA215C890600268882 /* AnimationsForAlgo */ = {
 			isa = PBXGroup;
 			children = (
-				D734D145215E757900D51599 /* select */,
-				AFF4C5EA215E2522004CC287 /* insert */,
-				AFF132B8215CB28900E7CD8C /* bubble */,
+				AF4D8F81215F6621003B505D /* Sort */,
 				AF04C7CB215C890600268882 /* AppDelegate.h */,
 				AF04C7CC215C890600268882 /* AppDelegate.m */,
 				AF04C7CE215C890600268882 /* ViewController.h */,
@@ -125,13 +126,51 @@
 			path = AnimationsForAlgo;
 			sourceTree = "<group>";
 		};
-		AFF132B8215CB28900E7CD8C /* bubble */ = {
+		AF4D8F81215F6621003B505D /* Sort */ = {
 			isa = PBXGroup;
 			children = (
-				AFF132B9215CB29300E7CD8C /* BubbleViewController.h */,
-				AFF132BA215CB29300E7CD8C /* BubbleViewController.m */,
+				AF4D8F8E215F6636003B505D /* shell */,
+				AF4D8F82215F6621003B505D /* insert */,
+				AF4D8F85215F6621003B505D /* bubble */,
+				AF4D8F88215F6621003B505D /* select */,
+			);
+			path = Sort;
+			sourceTree = "<group>";
+		};
+		AF4D8F82215F6621003B505D /* insert */ = {
+			isa = PBXGroup;
+			children = (
+				AF4D8F83215F6621003B505D /* InsertViewController.h */,
+				AF4D8F84215F6621003B505D /* InsertViewController.m */,
+			);
+			path = insert;
+			sourceTree = "<group>";
+		};
+		AF4D8F85215F6621003B505D /* bubble */ = {
+			isa = PBXGroup;
+			children = (
+				AF4D8F87215F6621003B505D /* BubbleViewController.h */,
+				AF4D8F86215F6621003B505D /* BubbleViewController.m */,
 			);
 			path = bubble;
+			sourceTree = "<group>";
+		};
+		AF4D8F88215F6621003B505D /* select */ = {
+			isa = PBXGroup;
+			children = (
+				AF4D8F89215F6621003B505D /* SelectViewController.h */,
+				AF4D8F8A215F6621003B505D /* SelectViewController.m */,
+			);
+			path = select;
+			sourceTree = "<group>";
+		};
+		AF4D8F8E215F6636003B505D /* shell */ = {
+			isa = PBXGroup;
+			children = (
+				AF4D8F8F215F66AB003B505D /* ShellViewController.h */,
+				AF4D8F90215F66AB003B505D /* ShellViewController.m */,
+			);
+			path = shell;
 			sourceTree = "<group>";
 		};
 		AFF4C5D3215DBA5D004CC287 /* Util */ = {
@@ -154,15 +193,6 @@
 				AFF4C5E2215DBA5D004CC287 /* UIButton+TPCustom.h */,
 			);
 			path = Util;
-			sourceTree = "<group>";
-		};
-		AFF4C5EA215E2522004CC287 /* insert */ = {
-			isa = PBXGroup;
-			children = (
-				AFF4C5EB215E2533004CC287 /* InsertViewController.h */,
-				AFF4C5EC215E2533004CC287 /* InsertViewController.m */,
-			);
-			path = insert;
 			sourceTree = "<group>";
 		};
 		AFF4C5F0215E2713004CC287 /* Protocol */ = {
@@ -188,15 +218,6 @@
 				BDECEBEB3F8BBE836AD89107 /* libPods-AnimationsForAlgo.a */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		D734D145215E757900D51599 /* select */ = {
-			isa = PBXGroup;
-			children = (
-				D734D146215E758800D51599 /* SelectViewController.h */,
-				D734D147215E758800D51599 /* SelectViewController.m */,
-			);
-			path = select;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -271,20 +292,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF4D8F8D215F6621003B505D /* SelectViewController.m in Sources */,
 				AFF4C5E9215DBA5D004CC287 /* UIView+TPFrameExtension.m in Sources */,
 				AF04C7D0215C890600268882 /* ViewController.m in Sources */,
-				AFF4C5ED215E2533004CC287 /* InsertViewController.m in Sources */,
-				D734D148215E758800D51599 /* SelectViewController.m in Sources */,
 				AFF4C5E8215DBA5D004CC287 /* TPScreenAdaptor.m in Sources */,
+				AF4D8F8B215F6621003B505D /* InsertViewController.m in Sources */,
 				AFF4C5E4215DBA5D004CC287 /* UILabel+FastSetting.m in Sources */,
 				AFF4C5E5215DBA5D004CC287 /* UIButton+TPCustom.m in Sources */,
+				AF4D8F91215F66AB003B505D /* ShellViewController.m in Sources */,
 				AF04C7DB215C890700268882 /* main.m in Sources */,
 				AFF4C5E3215DBA5D004CC287 /* TPCustomButton.m in Sources */,
+				AF4D8F8C215F6621003B505D /* BubbleViewController.m in Sources */,
 				AFF4C5F5215E27EB004CC287 /* BaseAlgoViewController.m in Sources */,
 				AFF4C5E6215DBA5D004CC287 /* UIView+WalkerFrame.m in Sources */,
 				AFF132B3215CAD5600E7CD8C /* SortViewController.m in Sources */,
 				AFF4C5E7215DBA5D004CC287 /* TPCustomLabel.m in Sources */,
-				AFF132BB215CB29300E7CD8C /* BubbleViewController.m in Sources */,
 				AF04C7CD215C890600268882 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -425,6 +447,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3P2FWDPYWL;
 				INFOPLIST_FILE = AnimationsForAlgo/Info.plist;
@@ -434,6 +457,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.allen.AnimationsForAlgo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -442,6 +466,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3P2FWDPYWL;
 				INFOPLIST_FILE = AnimationsForAlgo/Info.plist;
@@ -451,6 +476,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.allen.AnimationsForAlgo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

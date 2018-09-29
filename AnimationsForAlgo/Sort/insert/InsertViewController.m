@@ -20,7 +20,7 @@
 }
 
 - (void)beginAnimation{
-    if (j == self.examples.count) {
+    if (j == Count) {
         [self afterSorted];
         [self fireTimer];
         return;
