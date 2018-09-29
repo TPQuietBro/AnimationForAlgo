@@ -9,7 +9,6 @@
 #import "ShellViewController.h"
 
 @interface ShellViewController ()
-@property (nonatomic, assign) NSInteger hb;
 @end
 
 @implementation ShellViewController
@@ -17,11 +16,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.title = @"Shell";
-    self.hb = Count / 2;
+    j = Count / 2;
 }
-static NSInteger k = 0;
+//static NSInteger k = 0;
 - (void)beginAnimation{
-    j = self.hb;
+    
     if (j == 0) {
         [self fireTimer];
         [self afterSorted];
@@ -30,17 +29,15 @@ static NSInteger k = 0;
     
     if (i == Count - 1) {
         j = j / 2;
-        self.hb = j;
         return;
     }
     i = j;
-    
+    __block NSInteger k = i;
     if (k-j < 0) {
         [self reSetLabelBg];
         i++;
         return;
     }
-    k = i;
     
     UILabel *label = self.labels[k];
     label.backgroundColor = [UIColor redColor];
