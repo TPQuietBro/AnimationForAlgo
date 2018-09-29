@@ -15,19 +15,22 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.view.backgroundColor = [UIColor lightGrayColor];
     [self initLabels];
     [self startTimer];
 }
 
 - (void)initLabels{
-    CGFloat leftMargin = 10;
-    CGFloat width = 20;
-    CGFloat height = 25;
+    CGFloat width = 25;
+    CGFloat height = 35;
+    CGFloat leftMargin = 30;
+    CGFloat labelMargin = (self.view.frame.size.width - self.examples.count * width - leftMargin * 2) / (self.examples.count - 1);
+    
     for (NSInteger i = 0; i < self.examples.count; ++i) {
         UILabel *numLable = [[UILabel alloc] init];
         numLable.tp_font(@12).tp_text(self.examples[i]).tp_systemTextColor(ENBlackColor).tp_alignment(ENTextAlighmentCenter);
-        numLable.frame = CGRectMake(leftMargin + i * width, 100, width, height);
+        numLable.tp_bgColor([UIColor whiteColor]);
+        numLable.frame = CGRectMake(leftMargin + i * (width + labelMargin), 100, width, height);
         [self.view addSubview:numLable];
         [self.labels addObject:numLable];
     }
