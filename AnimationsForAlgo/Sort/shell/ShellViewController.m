@@ -12,13 +12,15 @@
 @end
 
 @implementation ShellViewController
-
+static NSInteger k = 0;
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.title = @"Shell";
     j = Count / 2;
+    i = j;
+    k = j;
 }
-//static NSInteger k = 0;
+
 - (void)beginAnimation{
     
     if (j == 0) {
@@ -27,15 +29,18 @@
         return;
     }
     
-    if (i == Count - 1) {
+    if (i == Count) {
         j = j / 2;
+        i = j;
+        k = i;
+        NSLog(@"change j = %zd",j);
         return;
     }
-    i = j;
-    __block NSInteger k = i;
-    if (k-j < 0) {
+    
+    if (k-j < 0 || [self.examples[k] integerValue] >= [self.examples[k-j] integerValue]) {
         [self reSetLabelBg];
         i++;
+        k = i;
         return;
     }
     
