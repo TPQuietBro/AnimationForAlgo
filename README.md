@@ -12,7 +12,7 @@ Insert:
 
 Select:
 
-![Select](GIF/Select.gif)
+![Select](GIF/select.gif)
 
 Shell:
 
