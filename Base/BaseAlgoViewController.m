@@ -15,8 +15,23 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor lightGrayColor];
+    [self initCustomBackButton];
     [self initLabels];
     [self startTimer];
+    
+}
+
+- (void)initCustomBackButton{
+    
+    UIButton *backButton = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 40, 40)];
+    [backButton setTitle:@"返回" forState:UIControlStateNormal];
+    [backButton setTitleColor:[UIColor purpleColor] forState:UIControlStateNormal];
+    [backButton addTarget:self action:@selector(popVc) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *backItem = [[UIBarButtonItem alloc]initWithCustomView:backButton];
+    self.navigationItem.leftBarButtonItem = backItem;
+}
+
+- (void)popVc{
 }
 
 - (void)dealloc{
@@ -93,6 +108,7 @@
     if (_timer) {
         [_timer invalidate];
         _timer = nil;
+        NSLog(@"timer is invalidated");
     }
 }
 

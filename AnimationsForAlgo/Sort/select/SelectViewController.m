@@ -20,36 +20,42 @@
 }
 
 - (void)beginAnimation{
-    __block NSInteger min = j;
-    if (j == Count) {
+    __block NSInteger min = self.j;
+    if (self.j == Count) {
         [self afterSorted];
         [self fireTimer];
         return;
     }
-    if (i == Count) {
-        i = j+1;
-        j ++;
+    if (self.i == Count) {
+        self.i = self.j+1;
+        self.j ++;
         [self reSetLabelBg];
         return;
     }
-    UILabel *label = self.labels[i];
+    UILabel *label = self.labels[self.i];
     label.backgroundColor = [UIColor redColor];
-    if (i != 0) {
-        UILabel *label = self.labels[i - 1];
+    if (self.i != 0) {
+        UILabel *label = self.labels[self.i - 1];
         label.backgroundColor = [UIColor whiteColor];
     }
-    if ([self.examples[min] integerValue] > [self.examples[i] integerValue]) {
+    if ([self.examples[min] integerValue] > [self.examples[self.i] integerValue]) {
         [self fireTimer];
         [UIView animateWithDuration:Duration animations:^{
-            [self swapArray:self.examples firstIndex:min secondIndex:i];
-            min = i;
+            [self swapArray:self.examples firstIndex:min secondIndex:self.i];
+            min = self.i;
         }completion:^(BOOL finished) {
             [self startTimer];
         }];
     }
-    i++;
+    self.i++;
 }
+
 - (void)sort{
     
+}
+
+- (void)popVc{
+    [self.navigationController popViewControllerAnimated:YES];
+    [self fireTimer];
 }
 @end

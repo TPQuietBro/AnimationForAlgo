@@ -19,33 +19,34 @@
 }
 
 - (void)beginAnimation{
-    if (j == Count - 1) {
+    if (self.j == Count - 1) {
         [self afterSorted];
         [self fireTimer];
         return;
     }
-    if (i == Count - j - 1) {
-        i = 0;
-        j ++;
+    if (self.i == Count - self.j - 1) {
+        self.i = 0;
+        self.j ++;
         [self reSetLabelBg];
         return;
     }
-    UILabel *label = self.labels[i];
+    UILabel *label = self.labels[self.i];
     label.backgroundColor = [UIColor redColor];
-    if (i != 0) {
-        UILabel *label = self.labels[i - 1];
+    if (self.i != 0) {
+        UILabel *label = self.labels[self.i - 1];
         label.backgroundColor = [UIColor whiteColor];
     }
-    if ([self.examples[i] integerValue] > [self.examples[i+1] integerValue]) {
+    if ([self.examples[self.i] integerValue] > [self.examples[self.i+1] integerValue]) {
         [self fireTimer];
         [UIView animateWithDuration:Duration animations:^{
-            [self swapArray:self.examples firstIndex:i secondIndex:i+1];
+            [self swapArray:self.examples firstIndex:self.i secondIndex:self.i+1];
         }completion:^(BOOL finished) {
             [self startTimer];
         }];
     }
-    i++;
+    self.i++;
 }
+
 - (void)sort{
     for (NSInteger i = 0; i < Count; ++i) {
         for (NSInteger j = 0; j < Count - 1 - i; ++j) {
@@ -54,5 +55,10 @@
             }
         }
     }
+}
+
+- (void)popVc{
+    [self.navigationController popViewControllerAnimated:YES];
+    [self fireTimer];
 }
 @end

@@ -12,11 +12,10 @@
 #define Duration [self duration] > 0 ? : 0.5
 #define Count self.examples.count
 
-static NSInteger i = 0;
-static NSInteger j = 0;
-
 @interface BaseAlgoViewController : UIViewController<TAlgoProtocol>
 @property (nonatomic, strong) NSMutableArray *examples;
 @property (nonatomic, strong) NSMutableArray *labels;
 @property (nonatomic, strong) NSTimer *timer;
+@property (nonatomic, assign) NSInteger i;
+@property (nonatomic, assign) NSInteger j;
 @end
