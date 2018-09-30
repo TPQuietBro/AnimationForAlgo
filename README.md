@@ -3,7 +3,20 @@
 ### 排序类
 
 Bubble:
-./GIF/bubble.gif
+
+![bubble](GIF/bubble.gif)
+
+Insert:
+
+![insert](GIF/insert.gif)
+
+Select:
+
+![Select](GIF/Select.gif)
+
+Shell:
+
+![shell](GIF/shell.gif)
 
 
 
