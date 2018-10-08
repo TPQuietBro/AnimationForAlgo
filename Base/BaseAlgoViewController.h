@@ -20,6 +20,7 @@ static CGFloat height = 35;
 @property (nonatomic, strong) NSMutableArray *examples;
 @property (nonatomic, strong) NSMutableArray *labels;
 @property (nonatomic, strong) NSTimer *timer;
-@property (nonatomic, assign) NSInteger i;
+@property (nonatomic, assign) NSInteger i; 
 @property (nonatomic, assign) NSInteger j;
+@property (nonatomic, assign) NSInteger k;
 @end

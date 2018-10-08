@@ -8,13 +8,14 @@
 
 #import "RadixViewController.h"
 #import "TPFrame.h"
-
+static NSInteger colSize = 20;
 #define firstLabel self.labels.firstObject
 
 @interface RadixViewController ()
 @property (nonatomic, assign) NSInteger maxNumber;
 @property (nonatomic, assign) NSInteger loops;
 @property (nonatomic, strong) NSArray *baseNumbers;
+@property (nonatomic, strong) NSMutableArray *tempArray;
 @end
 
 @implementation RadixViewController
@@ -28,9 +29,34 @@
     
     [self initBaseNumberLabels];
     [self addSepLine];
+    
+//    NSLog(@"----%@",self.tempArray);
+//    self.k =
 }
 
 - (void)beginAnimation{
+    if (self.j == self.loops) {
+        [self fireTimer];
+        [self afterSorted];
+        return;
+    }
+    
+    if (self.i == self.examples.count) {
+        self.j ++;
+        return;
+    }
+    
+    if (self.k == colSize) {
+        self.i ++;
+        return;
+    }
+    // 找到个位,十位......
+    NSInteger rowIndex = [self positionWithNumber:[self.examples[self.i] integerValue] loop:self.j];
+    if ([self.tempArray[rowIndex][self.k] length] == 0) {
+        [self.tempArray[rowIndex][self.k] replaceObjectAtIndex:rowIndex withObject:self.examples[self.i]];
+        self.i ++;
+    }
+    
     
 }
 
@@ -46,8 +72,8 @@
 #pragma mark - private
 
 - (void)initBaseNumberLabels{
-    CGFloat labelMargin = 5;
-    CGFloat topMargin = 15;
+    CGFloat labelMargin = 10;
+    CGFloat topMargin = 20 + height;
     
     for (NSInteger i = 0; i < self.baseNumbers.count; ++i) {
         UILabel *label = [[UILabel alloc] init];
@@ -56,6 +82,16 @@
         label.frame = CGRectMake([firstLabel x], CGRectGetMaxY([firstLabel frame]) + topMargin + i * (height  + labelMargin), width, height);
         [self.view addSubview:label];
     }
+    
+    CGFloat rowTopMargin = 15;
+    for (NSInteger j = 0; j < self.loops; ++j) {
+        UILabel *label = [[UILabel alloc] init];
+        label.tp_text([NSString stringWithFormat:@"%zd",j]).tp_font(@12).tp_alignment(ENTextAlighmentCenter)
+        .tp_bgColor([UIColor whiteColor]);
+        label.frame = CGRectMake([firstLabel x] + width + labelMargin + (width + labelMargin) * j, CGRectGetMaxY([firstLabel frame]) + rowTopMargin , width, height);
+        [self.view addSubview:label];
+    }
+    
 }
 
 - (void)addSepLine{
@@ -91,6 +127,20 @@
 
 - (NSInteger)positionWithNumber:(NSInteger)number loop:(NSInteger)loop{
     return (number / (NSInteger)pow(10, loop) % 10);
+}
+
+- (NSMutableArray *)tempArray{
+    if (!_tempArray) {
+        _tempArray = [[NSMutableArray alloc] initWithCapacity:self.baseNumbers.count];
+        for (NSInteger i = 0; i < self.baseNumbers.count; ++i) {
+            NSMutableArray *secondArray = [NSMutableArray array];
+            for (NSInteger j = 0; j < self.loops; ++j) {
+                [secondArray addObject:@""];
+            }
+            [_tempArray addObject:secondArray];
+        }
+    }
+    return _tempArray;
 }
 
 @end
