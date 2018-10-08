@@ -28,6 +28,7 @@
 		AFF4C5E9215DBA5D004CC287 /* UIView+TPFrameExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF4C5E1215DBA5D004CC287 /* UIView+TPFrameExtension.m */; };
 		AFF4C5EF215E257B004CC287 /* update.sh in Resources */ = {isa = PBXBuildFile; fileRef = AFF4C5EE215E257B004CC287 /* update.sh */; };
 		AFF4C5F5215E27EB004CC287 /* BaseAlgoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF4C5F4215E27EB004CC287 /* BaseAlgoViewController.m */; };
+		AFFDB725216B4869003D1735 /* RadixViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFFDB724216B4869003D1735 /* RadixViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +72,8 @@
 		AFF4C5F1215E2720004CC287 /* TAlgoProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TAlgoProtocol.h; sourceTree = "<group>"; };
 		AFF4C5F3215E27EB004CC287 /* BaseAlgoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseAlgoViewController.h; sourceTree = "<group>"; };
 		AFF4C5F4215E27EB004CC287 /* BaseAlgoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseAlgoViewController.m; sourceTree = "<group>"; };
+		AFFDB723216B4869003D1735 /* RadixViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RadixViewController.h; sourceTree = "<group>"; };
+		AFFDB724216B4869003D1735 /* RadixViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RadixViewController.m; sourceTree = "<group>"; };
 		BDECEBEB3F8BBE836AD89107 /* libPods-AnimationsForAlgo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AnimationsForAlgo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -129,6 +132,7 @@
 		AF4D8F81215F6621003B505D /* Sort */ = {
 			isa = PBXGroup;
 			children = (
+				AFFDB722216B485F003D1735 /* Radix */,
 				AF4D8F8E215F6636003B505D /* shell */,
 				AF4D8F82215F6621003B505D /* insert */,
 				AF4D8F85215F6621003B505D /* bubble */,
@@ -210,6 +214,15 @@
 				AFF4C5F4215E27EB004CC287 /* BaseAlgoViewController.m */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		AFFDB722216B485F003D1735 /* Radix */ = {
+			isa = PBXGroup;
+			children = (
+				AFFDB723216B4869003D1735 /* RadixViewController.h */,
+				AFFDB724216B4869003D1735 /* RadixViewController.m */,
+			);
+			path = Radix;
 			sourceTree = "<group>";
 		};
 		C6FBF80C63B9425C23D23661 /* Frameworks */ = {
@@ -294,6 +307,7 @@
 			files = (
 				AF4D8F8D215F6621003B505D /* SelectViewController.m in Sources */,
 				AFF4C5E9215DBA5D004CC287 /* UIView+TPFrameExtension.m in Sources */,
+				AFFDB725216B4869003D1735 /* RadixViewController.m in Sources */,
 				AF04C7D0215C890600268882 /* ViewController.m in Sources */,
 				AFF4C5E8215DBA5D004CC287 /* TPScreenAdaptor.m in Sources */,
 				AF4D8F8B215F6621003B505D /* InsertViewController.m in Sources */,

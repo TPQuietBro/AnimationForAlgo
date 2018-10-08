@@ -8,9 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import "TAlgoProtocol.h"
+#import "UILabel+FastSetting.h"
 
 #define Duration [self duration] > 0 ? : 0.5
 #define Count self.examples.count
+
+static CGFloat width = 25;
+static CGFloat height = 35;
 
 @interface BaseAlgoViewController : UIViewController<TAlgoProtocol>
 @property (nonatomic, strong) NSMutableArray *examples;

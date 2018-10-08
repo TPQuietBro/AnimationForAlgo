@@ -11,6 +11,7 @@
 #import "InsertViewController.h"
 #import "SelectViewController.h"
 #import "ShellViewController.h"
+#import "RadixViewController.h"
 
 @interface SortViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tabelView;
@@ -45,12 +46,14 @@ static NSString *const ID = @"id";
         [self.navigationController pushViewController:[SelectViewController new] animated:YES];
     } else if (indexPath.row == 3){
         [self.navigationController pushViewController:[ShellViewController new] animated:YES];
+    } else if (indexPath.row == 4){
+        [self.navigationController pushViewController:[RadixViewController new] animated:YES];
     }
 }
 
 - (NSArray *)sorts{
     if (!_sorts) {
-        _sorts = @[@"bubble",@"insert",@"select",@"shell"];
+        _sorts = @[@"bubble",@"insert",@"select",@"shell",@"radix"];
     }
     return _sorts;
 }

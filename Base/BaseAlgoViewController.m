@@ -6,7 +6,6 @@
 //  Copyright © 2018 唐鹏. All rights reserved.
 
 #import "BaseAlgoViewController.h"
-#import "UILabel+FastSetting.h"
 
 @interface BaseAlgoViewController ()
 @end
@@ -39,8 +38,6 @@
 }
 
 - (void)initLabels{
-    CGFloat width = 25;
-    CGFloat height = 35;
     CGFloat leftMargin = 30;
     CGFloat labelMargin = (self.view.frame.size.width - self.examples.count * width - leftMargin * 2) / (self.examples.count - 1);
     
