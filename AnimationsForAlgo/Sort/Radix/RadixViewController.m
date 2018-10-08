@@ -42,22 +42,28 @@ static NSInteger colSize = 20;
     }
     
     if (self.i == self.examples.count) {
+        
         self.j ++;
         return;
     }
     
     if (self.k == colSize) {
         self.i ++;
+        self.k = 0;
         return;
     }
     // 找到个位,十位......
     NSInteger rowIndex = [self positionWithNumber:[self.examples[self.i] integerValue] loop:self.j];
     if ([self.tempArray[rowIndex][self.k] length] == 0) {
-        [self.tempArray[rowIndex][self.k] replaceObjectAtIndex:rowIndex withObject:self.examples[self.i]];
+        [self.tempArray[rowIndex] replaceObjectAtIndex:self.k withObject:self.examples[self.i]];
         self.i ++;
+        self.k = 0;
+    } else {
+        self.k ++;
     }
     
-    
+    NSLog(@"j = %zd,i = %zd,k = %zd,rowIndex = %zd",self.j,self.i,self.k,rowIndex);
+
 }
 
 - (void)sort{
@@ -134,7 +140,7 @@ static NSInteger colSize = 20;
         _tempArray = [[NSMutableArray alloc] initWithCapacity:self.baseNumbers.count];
         for (NSInteger i = 0; i < self.baseNumbers.count; ++i) {
             NSMutableArray *secondArray = [NSMutableArray array];
-            for (NSInteger j = 0; j < self.loops; ++j) {
+            for (NSInteger j = 0; j < colSize; ++j) {
                 [secondArray addObject:@""];
             }
             [_tempArray addObject:secondArray];
