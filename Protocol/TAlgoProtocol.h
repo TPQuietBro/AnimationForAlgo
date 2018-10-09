@@ -14,7 +14,6 @@
 - (void)swapArray:(NSMutableArray *)array firstIndex:(NSInteger)first secondIndex:(NSInteger)second;
 - (void)popVc;
 @optional
-- (void)swapLabelWithFirstIndex:(NSInteger)first secondIndex:(NSInteger)second;
 - (void)sort;
 - (void)afterSorted;
 - (NSTimeInterval)duration;
