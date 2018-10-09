@@ -29,24 +29,25 @@ static CGFloat colMargin = 5;
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.title = @"基数排序";
-    self.maxNumber = [self maxNumber];
-    self.loops = [self loopsWithNumber:self.maxNumber];
-    self.baseNumbers = @[@"0",@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9"];
-    self.baseArray = [@[] mutableCopy];
-    self.cpArray = [@[] mutableCopy];
-    [self initBaseNumberLabels];
-    [self addSepLine];
-    [self showHud];
+    self.maxNumber = [self maxNumber]; // 找到最大数
+    self.loops = [self loopsWithNumber:self.maxNumber]; //找到最大数的位数,当做比较最外层循环次数
+    self.baseNumbers = @[@"0",@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9"]; // 基数
+    self.baseArray = [@[] mutableCopy]; // 基数label
+    self.cpArray = [@[] mutableCopy]; // 复制的示例label
+    [self initBaseNumberLabels]; // 初始化基数label
+    [self addSepLine]; // 添加分割线
+    [self showHud]; // 显示第一次的个位比较
 }
 
 - (void)beginAnimation{
     
+    // 最外层循环控制j
     if (self.j == self.loops) {
         [self showFinishHud];
         [self fireTimer];
         return;
     }
-    
+    // 内存循环i控制赋值
     if (self.i == self.examples.count) {
         [self reSetLabelBg];
         self.j ++;
@@ -56,33 +57,36 @@ static CGFloat colMargin = 5;
         [self fireTimer];
         // 每一次loop之后需要重新置换初始数组内的数据,根据tempArray重新排序
         [self updateExamples];
+        // 清楚当前位数的控件
         [self.cpArray makeObjectsPerformSelector:@selector(removeFromSuperview)];
         __weak typeof(self) weakSelf = self;
+        // 更新示例数组的排序
         [self updateLabelsCompleteBlock:^{
             [weakSelf startTimer];
         }];
-        
+        // 打印排序结果
         [self afterSorted];
-        
+        // 显示下一位比较
         [self showHud];
         
         return;
     }
-    
+    // 最内层循环 主要是tempArray的填充
     if (self.k == colSize) {
         self.i ++;
         self.k = 0;
         return;
     }
-    
+    // 添加红色的标记
     UILabel *label = self.labels[self.i];
     label.backgroundColor = [UIColor redColor];
+    // 将前一位标记去掉
     if (self.i != 0) {
         UILabel *label = self.labels[self.i - 1];
         label.backgroundColor = [UIColor whiteColor];
     }
     
-    // 找到个位,十位......
+    // 根据当前循环的次数和示例数字 找到个位,十位......
     NSInteger rowIndex = [self positionWithNumber:[self.examples[self.i] integerValue] loop:self.j];
     if ([self.tempArray[rowIndex][self.k] length] == 0) {
         [self fireTimer];
@@ -97,6 +101,7 @@ static CGFloat colMargin = 5;
             label.y = baseLabel.y;
         } completion:^(BOOL finished) {
             [self addCpLabelWithLabel:label originFrame:originFrame];
+            // 用这个二维数组保存当前的示例数字, rowIndex 代表基数行,self.k代表哪一列
             [self.tempArray[rowIndex] replaceObjectAtIndex:self.k withObject:self.examples[self.i]];
             self.i ++;
             self.k = 0;
