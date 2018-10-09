@@ -46,7 +46,7 @@ static CGFloat colMargin = 5;
     }
     
     if (self.i == self.examples.count) {
-        
+        [self reSetLabelBg];
         self.j ++;
         self.i = 0;
         self.k = 0;
@@ -58,6 +58,14 @@ static CGFloat colMargin = 5;
         self.k = 0;
         return;
     }
+    
+    UILabel *label = self.labels[self.i];
+    label.backgroundColor = [UIColor redColor];
+    if (self.i != 0) {
+        UILabel *label = self.labels[self.i - 1];
+        label.backgroundColor = [UIColor whiteColor];
+    }
+    
     // 找到个位,十位......
     NSInteger rowIndex = [self positionWithNumber:[self.examples[self.i] integerValue] loop:self.j];
     if ([self.tempArray[rowIndex][self.k] length] == 0) {
@@ -69,6 +77,7 @@ static CGFloat colMargin = 5;
             label.x = baseLabel.x + width + margin + self.k * (width + colMargin);
             label.y = baseLabel.y;
         } completion:^(BOOL finished) {
+            label.tp_bgColor([UIColor whiteColor]);
             [self addCpLabelWithLabel:label originFrame:originFrame];
             [self.tempArray[rowIndex] replaceObjectAtIndex:self.k withObject:self.examples[self.i]];
             self.i ++;
@@ -119,7 +128,6 @@ static CGFloat colMargin = 5;
 }
 
 - (void)addSepLine{
-    
     UILabel *sepLabel = [[UILabel alloc] init];
     sepLabel.tp_bgColor([UIColor orangeColor]);
     sepLabel.frame = CGRectMake([firstLabel x], CGRectGetMaxY([firstLabel frame]) + margin, self.view.width - 2 * [firstLabel x], 1);
@@ -127,6 +135,7 @@ static CGFloat colMargin = 5;
 }
 
 - (void)addCpLabelWithLabel:(UILabel *)label originFrame:(CGRect)originFrame{
+//    label.tp_bgColor([UIColor whiteColor]);
     UILabel *cpLabel = [[UILabel alloc] init];
     cpLabel.tp_text(label.text).tp_font(label.font).
     tp_alignment(ENTextAlighmentCenter).tp_bgColor(label.backgroundColor);
