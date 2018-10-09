@@ -28,6 +28,7 @@
 		AFF4C5E9215DBA5D004CC287 /* UIView+TPFrameExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF4C5E1215DBA5D004CC287 /* UIView+TPFrameExtension.m */; };
 		AFF4C5EF215E257B004CC287 /* update.sh in Resources */ = {isa = PBXBuildFile; fileRef = AFF4C5EE215E257B004CC287 /* update.sh */; };
 		AFF4C5F5215E27EB004CC287 /* BaseAlgoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF4C5F4215E27EB004CC287 /* BaseAlgoViewController.m */; };
+		AFFC4BF9216CA024002432BD /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = AFFC4BF7216CA024002432BD /* MBProgressHUD.m */; };
 		AFFDB725216B4869003D1735 /* RadixViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFFDB724216B4869003D1735 /* RadixViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -72,6 +73,8 @@
 		AFF4C5F1215E2720004CC287 /* TAlgoProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TAlgoProtocol.h; sourceTree = "<group>"; };
 		AFF4C5F3215E27EB004CC287 /* BaseAlgoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseAlgoViewController.h; sourceTree = "<group>"; };
 		AFF4C5F4215E27EB004CC287 /* BaseAlgoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseAlgoViewController.m; sourceTree = "<group>"; };
+		AFFC4BF7216CA024002432BD /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		AFFC4BF8216CA024002432BD /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		AFFDB723216B4869003D1735 /* RadixViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RadixViewController.h; sourceTree = "<group>"; };
 		AFFDB724216B4869003D1735 /* RadixViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RadixViewController.m; sourceTree = "<group>"; };
 		BDECEBEB3F8BBE836AD89107 /* libPods-AnimationsForAlgo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AnimationsForAlgo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -180,6 +183,7 @@
 		AFF4C5D3215DBA5D004CC287 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				AFFC4BF6216CA024002432BD /* MBProgressHUD */,
 				AFF4C5D4215DBA5D004CC287 /* UIView+WalkerFrame.h */,
 				AFF4C5D5215DBA5D004CC287 /* TPCustomButton.m */,
 				AFF4C5D6215DBA5D004CC287 /* UILabel+FastSetting.m */,
@@ -214,6 +218,15 @@
 				AFF4C5F4215E27EB004CC287 /* BaseAlgoViewController.m */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		AFFC4BF6216CA024002432BD /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				AFFC4BF8216CA024002432BD /* MBProgressHUD.h */,
+				AFFC4BF7216CA024002432BD /* MBProgressHUD.m */,
+			);
+			path = MBProgressHUD;
 			sourceTree = "<group>";
 		};
 		AFFDB722216B485F003D1735 /* Radix */ = {
@@ -318,6 +331,7 @@
 				AFF4C5E3215DBA5D004CC287 /* TPCustomButton.m in Sources */,
 				AF4D8F8C215F6621003B505D /* BubbleViewController.m in Sources */,
 				AFF4C5F5215E27EB004CC287 /* BaseAlgoViewController.m in Sources */,
+				AFFC4BF9216CA024002432BD /* MBProgressHUD.m in Sources */,
 				AFF4C5E6215DBA5D004CC287 /* UIView+WalkerFrame.m in Sources */,
 				AFF132B3215CAD5600E7CD8C /* SortViewController.m in Sources */,
 				AFF4C5E7215DBA5D004CC287 /* TPCustomLabel.m in Sources */,

@@ -21,7 +21,6 @@
 }
 
 - (void)initCustomBackButton{
-    
     UIButton *backButton = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 40, 40)];
     [backButton setTitle:@"返回" forState:UIControlStateNormal];
     [backButton setTitleColor:[UIColor purpleColor] forState:UIControlStateNormal];
@@ -98,7 +97,7 @@
     for (id number in _examples) {
         [string appendString:[NSString stringWithFormat:@"%@ ",number]];
     }
-    NSLog(@"%@",string);
+    NSLog(@"after sorted : %@",string);
 }
 
 - (void)fireTimer{

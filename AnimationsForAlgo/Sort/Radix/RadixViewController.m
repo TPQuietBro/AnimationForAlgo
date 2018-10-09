@@ -8,6 +8,7 @@
 
 #import "RadixViewController.h"
 #import "TPFrame.h"
+#import "MBProgressHUD.h"
 static NSInteger colSize = 9;
 static CGFloat margin = 7.5;
 static CGFloat colMargin = 5;
@@ -19,6 +20,8 @@ static CGFloat colMargin = 5;
 @property (nonatomic, strong) NSArray *baseNumbers;
 @property (nonatomic, strong) NSMutableArray *tempArray;
 @property (nonatomic, strong) NSMutableArray *baseArray;
+@property (nonatomic, strong) NSMutableArray *cpArray;
+@property (nonatomic, strong) MBProgressHUD *hud;
 @end
 
 @implementation RadixViewController
@@ -30,18 +33,16 @@ static CGFloat colMargin = 5;
     self.loops = [self loopsWithNumber:self.maxNumber];
     self.baseNumbers = @[@"0",@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9"];
     self.baseArray = [@[] mutableCopy];
+    self.cpArray = [@[] mutableCopy];
     [self initBaseNumberLabels];
     [self addSepLine];
-    
-//    NSLog(@"----%@",self.tempArray);
-//    self.k =
+    [self showHud];
 }
 
 - (void)beginAnimation{
     
     if (self.j == self.loops) {
         [self fireTimer];
-        [self afterSorted];
         return;
     }
     
@@ -50,6 +51,20 @@ static CGFloat colMargin = 5;
         self.j ++;
         self.i = 0;
         self.k = 0;
+        
+        [self fireTimer];
+        // 每一次loop之后需要重新置换初始数组内的数据,根据tempArray重新排序
+        [self updateExamples];
+        [self.cpArray makeObjectsPerformSelector:@selector(removeFromSuperview)];
+        __weak typeof(self) weakSelf = self;
+        [self updateLabelsCompleteBlock:^{
+            [weakSelf startTimer];
+        }];
+        
+        [self afterSorted];
+        
+        [self showHud];
+        
         return;
     }
     
@@ -69,15 +84,17 @@ static CGFloat colMargin = 5;
     // 找到个位,十位......
     NSInteger rowIndex = [self positionWithNumber:[self.examples[self.i] integerValue] loop:self.j];
     if ([self.tempArray[rowIndex][self.k] length] == 0) {
+        [self fireTimer];
+        
         UILabel *label = self.labels[self.i];
         CGRect originFrame = label.frame;
+        
         UILabel *baseLabel = self.baseArray[rowIndex];
+
         [UIView animateWithDuration:Duration animations:^{
-            [self fireTimer];
             label.x = baseLabel.x + width + margin + self.k * (width + colMargin);
             label.y = baseLabel.y;
         } completion:^(BOOL finished) {
-            label.tp_bgColor([UIColor whiteColor]);
             [self addCpLabelWithLabel:label originFrame:originFrame];
             [self.tempArray[rowIndex] replaceObjectAtIndex:self.k withObject:self.examples[self.i]];
             self.i ++;
@@ -102,6 +119,45 @@ static CGFloat colMargin = 5;
 }
 
 #pragma mark - private
+
+- (NSString *)currentPostion{
+    if (self.j == 0) {
+        return @"比较个位数";
+    } else if (self.j == 1){
+        return @"比较十位数";
+    } else if (self.j == 2){
+        return @"比较百位数";
+    } else if (self.j == 3){
+        return @"比较千位数";
+    } else if (self.j == 4){
+        return @"比较万位数";
+    }
+    return @"自己加多少位";
+}
+
+- (void)updateLabelsCompleteBlock:(void(^)(void))complete{
+    for (NSInteger i = 0; i < self.labels.count; i++) {
+        UILabel *label = self.labels[i];
+        NSString *value = self.examples[i];
+        if (![label.text isEqualToString:value]) {
+            label.text = value;
+        }
+    }
+    complete ? complete() : nil;
+}
+
+- (void)updateExamples{
+    NSInteger index = 0;
+    for (NSInteger m = 0; m < 10; m++) {
+        for (NSInteger n = 0; n < colSize; n++) {
+            if ([self.tempArray[m][n] length] != 0) {
+                [self.examples replaceObjectAtIndex:index withObject:self.tempArray[m][n]];
+                self.tempArray[m][n] = @"";
+                index ++;
+            }
+        }
+    }
+}
 
 - (void)initBaseNumberLabels{
     CGFloat labelMargin = 10;
@@ -135,13 +191,16 @@ static CGFloat colMargin = 5;
 }
 
 - (void)addCpLabelWithLabel:(UILabel *)label originFrame:(CGRect)originFrame{
-//    label.tp_bgColor([UIColor whiteColor]);
+    label.tp_bgColor([UIColor whiteColor]);
+    
     UILabel *cpLabel = [[UILabel alloc] init];
     cpLabel.tp_text(label.text).tp_font(label.font).
     tp_alignment(ENTextAlighmentCenter).tp_bgColor(label.backgroundColor);
     cpLabel.frame = label.frame;
     [self.view addSubview:cpLabel];
+    
     label.frame = originFrame;
+    [self.cpArray addObject:cpLabel];
 }
 
 - (NSInteger)loopsWithNumber:(NSInteger)number{
@@ -183,6 +242,27 @@ static CGFloat colMargin = 5;
         }
     }
     return _tempArray;
+}
+
+- (void)showHud{
+    if (self.hud || self.loops == self.j) {
+        return;
+    }
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    hud.mode = MBProgressHUDModeText;
+    hud.labelText = [self currentPostion];
+    [hud show:YES];
+    self.hud = hud;
+    [self fireTimer];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self hidHud];
+        [self startTimer];
+        self.hud = nil;
+    });
+}
+
+- (void)hidHud{
+    [self.hud hide:YES];
 }
 
 @end
