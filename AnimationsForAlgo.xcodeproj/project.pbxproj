@@ -184,21 +184,21 @@
 			isa = PBXGroup;
 			children = (
 				AFFC4BF6216CA024002432BD /* MBProgressHUD */,
-				AFF4C5D4215DBA5D004CC287 /* UIView+WalkerFrame.h */,
-				AFF4C5D5215DBA5D004CC287 /* TPCustomButton.m */,
-				AFF4C5D6215DBA5D004CC287 /* UILabel+FastSetting.m */,
-				AFF4C5D7215DBA5D004CC287 /* TPScreenAdaptor.h */,
-				AFF4C5D8215DBA5D004CC287 /* TPCustomLabel.h */,
-				AFF4C5D9215DBA5D004CC287 /* UIView+TPFrameExtension.h */,
-				AFF4C5DA215DBA5D004CC287 /* UIButton+TPCustom.m */,
 				AFF4C5DB215DBA5D004CC287 /* TPFrame.h */,
-				AFF4C5DC215DBA5D004CC287 /* TPCustomButton.h */,
+				AFF4C5D4215DBA5D004CC287 /* UIView+WalkerFrame.h */,
 				AFF4C5DD215DBA5D004CC287 /* UIView+WalkerFrame.m */,
-				AFF4C5DE215DBA5D004CC287 /* TPCustomLabel.m */,
+				AFF4C5DC215DBA5D004CC287 /* TPCustomButton.h */,
+				AFF4C5D5215DBA5D004CC287 /* TPCustomButton.m */,
+				AFF4C5D7215DBA5D004CC287 /* TPScreenAdaptor.h */,
 				AFF4C5DF215DBA5D004CC287 /* TPScreenAdaptor.m */,
-				AFF4C5E0215DBA5D004CC287 /* UILabel+FastSetting.h */,
+				AFF4C5D8215DBA5D004CC287 /* TPCustomLabel.h */,
+				AFF4C5DE215DBA5D004CC287 /* TPCustomLabel.m */,
+				AFF4C5D9215DBA5D004CC287 /* UIView+TPFrameExtension.h */,
 				AFF4C5E1215DBA5D004CC287 /* UIView+TPFrameExtension.m */,
 				AFF4C5E2215DBA5D004CC287 /* UIButton+TPCustom.h */,
+				AFF4C5DA215DBA5D004CC287 /* UIButton+TPCustom.m */,
+				AFF4C5E0215DBA5D004CC287 /* UILabel+FastSetting.h */,
+				AFF4C5D6215DBA5D004CC287 /* UILabel+FastSetting.m */,
 			);
 			path = Util;
 			sourceTree = "<group>";

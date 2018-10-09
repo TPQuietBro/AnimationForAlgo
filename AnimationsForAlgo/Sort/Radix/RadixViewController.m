@@ -114,8 +114,8 @@ static CGFloat colMargin = 5;
 }
 
 - (void)popVc{
-    [self.navigationController popViewControllerAnimated:YES];
     [self fireTimer];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 #pragma mark - private
