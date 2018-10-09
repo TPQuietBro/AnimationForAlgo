@@ -30,6 +30,7 @@
 		AFF4C5F5215E27EB004CC287 /* BaseAlgoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF4C5F4215E27EB004CC287 /* BaseAlgoViewController.m */; };
 		AFFC4BF9216CA024002432BD /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = AFFC4BF7216CA024002432BD /* MBProgressHUD.m */; };
 		AFFDB725216B4869003D1735 /* RadixViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFFDB724216B4869003D1735 /* RadixViewController.m */; };
+		D7CE6594216CED76009A120D /* HeapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7CE6593216CED76009A120D /* HeapViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +79,8 @@
 		AFFDB723216B4869003D1735 /* RadixViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RadixViewController.h; sourceTree = "<group>"; };
 		AFFDB724216B4869003D1735 /* RadixViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RadixViewController.m; sourceTree = "<group>"; };
 		BDECEBEB3F8BBE836AD89107 /* libPods-AnimationsForAlgo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AnimationsForAlgo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7CE6592216CED76009A120D /* HeapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HeapViewController.h; sourceTree = "<group>"; };
+		D7CE6593216CED76009A120D /* HeapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HeapViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +138,7 @@
 		AF4D8F81215F6621003B505D /* Sort */ = {
 			isa = PBXGroup;
 			children = (
+				D7CE6591216CED6A009A120D /* heap */,
 				AFFDB722216B485F003D1735 /* Radix */,
 				AF4D8F8E215F6636003B505D /* shell */,
 				AF4D8F82215F6621003B505D /* insert */,
@@ -246,6 +250,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D7CE6591216CED6A009A120D /* heap */ = {
+			isa = PBXGroup;
+			children = (
+				D7CE6592216CED76009A120D /* HeapViewController.h */,
+				D7CE6593216CED76009A120D /* HeapViewController.m */,
+			);
+			path = heap;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -327,6 +340,7 @@
 				AFF4C5E4215DBA5D004CC287 /* UILabel+FastSetting.m in Sources */,
 				AFF4C5E5215DBA5D004CC287 /* UIButton+TPCustom.m in Sources */,
 				AF4D8F91215F66AB003B505D /* ShellViewController.m in Sources */,
+				D7CE6594216CED76009A120D /* HeapViewController.m in Sources */,
 				AF04C7DB215C890700268882 /* main.m in Sources */,
 				AFF4C5E3215DBA5D004CC287 /* TPCustomButton.m in Sources */,
 				AF4D8F8C215F6621003B505D /* BubbleViewController.m in Sources */,
