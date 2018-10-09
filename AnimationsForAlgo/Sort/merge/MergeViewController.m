@@ -1,22 +1,22 @@
 //
-//  HeapViewController.m
+//  MergeViewController.m
 //  AnimationsForAlgo
 //
 //  Created by allentang on 2018/10/9.
 //  Copyright © 2018 唐鹏. All rights reserved.
 //
 
-#import "HeapViewController.h"
+#import "MergeViewController.h"
 
-@interface HeapViewController ()
+@interface MergeViewController ()
 
 @end
 
-@implementation HeapViewController
+@implementation MergeViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationItem.title = @"堆排序";
+    self.navigationItem.title = @"归并排序";
 }
 
 - (void)beginAnimation{

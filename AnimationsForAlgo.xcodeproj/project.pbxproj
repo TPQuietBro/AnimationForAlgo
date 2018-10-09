@@ -30,7 +30,9 @@
 		AFF4C5F5215E27EB004CC287 /* BaseAlgoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF4C5F4215E27EB004CC287 /* BaseAlgoViewController.m */; };
 		AFFC4BF9216CA024002432BD /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = AFFC4BF7216CA024002432BD /* MBProgressHUD.m */; };
 		AFFDB725216B4869003D1735 /* RadixViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFFDB724216B4869003D1735 /* RadixViewController.m */; };
+		D736AFF6216CF3E40054D375 /* QuickViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D736AFF5216CF3E40054D375 /* QuickViewController.m */; };
 		D7CE6594216CED76009A120D /* HeapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7CE6593216CED76009A120D /* HeapViewController.m */; };
+		D7CE6598216CEE7C009A120D /* MergeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7CE6597216CEE7C009A120D /* MergeViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -79,8 +81,12 @@
 		AFFDB723216B4869003D1735 /* RadixViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RadixViewController.h; sourceTree = "<group>"; };
 		AFFDB724216B4869003D1735 /* RadixViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RadixViewController.m; sourceTree = "<group>"; };
 		BDECEBEB3F8BBE836AD89107 /* libPods-AnimationsForAlgo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AnimationsForAlgo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D736AFF4216CF3E40054D375 /* QuickViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QuickViewController.h; sourceTree = "<group>"; };
+		D736AFF5216CF3E40054D375 /* QuickViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuickViewController.m; sourceTree = "<group>"; };
 		D7CE6592216CED76009A120D /* HeapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HeapViewController.h; sourceTree = "<group>"; };
 		D7CE6593216CED76009A120D /* HeapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HeapViewController.m; sourceTree = "<group>"; };
+		D7CE6596216CEE7C009A120D /* MergeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MergeViewController.h; sourceTree = "<group>"; };
+		D7CE6597216CEE7C009A120D /* MergeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MergeViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +144,8 @@
 		AF4D8F81215F6621003B505D /* Sort */ = {
 			isa = PBXGroup;
 			children = (
+				D736AFF3216CF3DA0054D375 /* quick */,
+				D7CE6595216CEE70009A120D /* merge */,
 				D7CE6591216CED6A009A120D /* heap */,
 				AFFDB722216B485F003D1735 /* Radix */,
 				AF4D8F8E215F6636003B505D /* shell */,
@@ -250,6 +258,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D736AFF3216CF3DA0054D375 /* quick */ = {
+			isa = PBXGroup;
+			children = (
+				D736AFF4216CF3E40054D375 /* QuickViewController.h */,
+				D736AFF5216CF3E40054D375 /* QuickViewController.m */,
+			);
+			path = quick;
+			sourceTree = "<group>";
+		};
 		D7CE6591216CED6A009A120D /* heap */ = {
 			isa = PBXGroup;
 			children = (
@@ -257,6 +274,15 @@
 				D7CE6593216CED76009A120D /* HeapViewController.m */,
 			);
 			path = heap;
+			sourceTree = "<group>";
+		};
+		D7CE6595216CEE70009A120D /* merge */ = {
+			isa = PBXGroup;
+			children = (
+				D7CE6596216CEE7C009A120D /* MergeViewController.h */,
+				D7CE6597216CEE7C009A120D /* MergeViewController.m */,
+			);
+			path = merge;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -334,6 +360,7 @@
 				AF4D8F8D215F6621003B505D /* SelectViewController.m in Sources */,
 				AFF4C5E9215DBA5D004CC287 /* UIView+TPFrameExtension.m in Sources */,
 				AFFDB725216B4869003D1735 /* RadixViewController.m in Sources */,
+				D7CE6598216CEE7C009A120D /* MergeViewController.m in Sources */,
 				AF04C7D0215C890600268882 /* ViewController.m in Sources */,
 				AFF4C5E8215DBA5D004CC287 /* TPScreenAdaptor.m in Sources */,
 				AF4D8F8B215F6621003B505D /* InsertViewController.m in Sources */,
@@ -341,6 +368,7 @@
 				AFF4C5E5215DBA5D004CC287 /* UIButton+TPCustom.m in Sources */,
 				AF4D8F91215F66AB003B505D /* ShellViewController.m in Sources */,
 				D7CE6594216CED76009A120D /* HeapViewController.m in Sources */,
+				D736AFF6216CF3E40054D375 /* QuickViewController.m in Sources */,
 				AF04C7DB215C890700268882 /* main.m in Sources */,
 				AFF4C5E3215DBA5D004CC287 /* TPCustomButton.m in Sources */,
 				AF4D8F8C215F6621003B505D /* BubbleViewController.m in Sources */,

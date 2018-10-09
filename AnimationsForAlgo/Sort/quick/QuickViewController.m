@@ -1,22 +1,22 @@
 //
-//  HeapViewController.m
+//  QuickViewController.m
 //  AnimationsForAlgo
 //
 //  Created by allentang on 2018/10/9.
 //  Copyright © 2018 唐鹏. All rights reserved.
 //
 
-#import "HeapViewController.h"
+#import "QuickViewController.h"
 
-@interface HeapViewController ()
+@interface QuickViewController ()
 
 @end
 
-@implementation HeapViewController
+@implementation QuickViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationItem.title = @"堆排序";
+    self.navigationItem.title = @"快速排序";
 }
 
 - (void)beginAnimation{
