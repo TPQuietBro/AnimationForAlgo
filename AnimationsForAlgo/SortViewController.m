@@ -12,6 +12,9 @@
 #import "SelectViewController.h"
 #import "ShellViewController.h"
 #import "RadixViewController.h"
+#import "MergeViewController.h"
+#import "HeapViewController.h"
+#import "QuickViewController.h"
 
 @interface SortViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tabelView;
@@ -48,12 +51,19 @@ static NSString *const ID = @"id";
         [self.navigationController pushViewController:[ShellViewController new] animated:YES];
     } else if (indexPath.row == 4){
         [self.navigationController pushViewController:[RadixViewController new] animated:YES];
+    } else if (indexPath.row == 5){
+        [self.navigationController pushViewController:[MergeViewController new] animated:YES];
+    } else if (indexPath.row == 6){
+        [self.navigationController pushViewController:[HeapViewController new] animated:YES];
+    } else if (indexPath.row == 7){
+        [self.navigationController pushViewController:[QuickViewController new] animated:YES];
     }
+    
 }
 
 - (NSArray *)sorts{
     if (!_sorts) {
-        _sorts = @[@"bubble",@"insert",@"select",@"shell",@"radix"];
+        _sorts = @[@"bubble",@"insert",@"select",@"shell",@"radix",@"merge",@"heap",@"quick"];
     }
     return _sorts;
 }
