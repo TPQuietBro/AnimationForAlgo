@@ -13,5 +13,5 @@
 @property (nonatomic, strong) NSDictionary *sortSelectVcDict;
 @property (nonatomic, strong) NSArray *vcNames;
 @property (nonatomic, strong) NSArray *sortTitles;
-- (NSString *)titleWithController:(Class)controllerCls;
+- (NSString *)sortTitleWithController:(Class)controllerCls;
 @end
