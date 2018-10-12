@@ -7,18 +7,11 @@
 //
 
 #import "SortViewController.h"
-#import "BubbleViewController.h"
-#import "InsertViewController.h"
-#import "SelectViewController.h"
-#import "ShellViewController.h"
-#import "RadixViewController.h"
-#import "MergeViewController.h"
-#import "HeapViewController.h"
-#import "QuickViewController.h"
 
 @interface SortViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tabelView;
 @property (nonatomic, strong) NSArray *sorts;
+@property (nonatomic, strong) NSDictionary *sortVcDict;
 @end
 
 static NSString *const ID = @"id";
@@ -41,24 +34,28 @@ static NSString *const ID = @"id";
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    if (indexPath.row == 0) {
-        [self.navigationController pushViewController:[BubbleViewController new] animated:YES];
-    } else if (indexPath.row == 1){
-        [self.navigationController pushViewController:[InsertViewController new] animated:YES];
-    } else if (indexPath.row == 2){
-        [self.navigationController pushViewController:[SelectViewController new] animated:YES];
-    } else if (indexPath.row == 3){
-        [self.navigationController pushViewController:[ShellViewController new] animated:YES];
-    } else if (indexPath.row == 4){
-        [self.navigationController pushViewController:[RadixViewController new] animated:YES];
-    } else if (indexPath.row == 5){
-        [self.navigationController pushViewController:[MergeViewController new] animated:YES];
-    } else if (indexPath.row == 6){
-        [self.navigationController pushViewController:[HeapViewController new] animated:YES];
-    } else if (indexPath.row == 7){
-        [self.navigationController pushViewController:[QuickViewController new] animated:YES];
+    NSString *targetVcString = self.sortVcDict[@(indexPath.row)];
+    id targetVc = [[NSClassFromString(targetVcString) alloc] init];
+    if ([targetVc isKindOfClass:[UIViewController class]]) {
+        [self.navigationController pushViewController:targetVc animated:YES];
+    } else {
+        NSAssert(targetVc, @"targetVc is not a UIViewController");
     }
-    
+}
+#pragma mark - getter
+- (NSDictionary *)sortVcDict{
+    if (!_sortVcDict) {
+        _sortVcDict = @{@(0) : @"BubbleViewController",
+                        @(1) : @"InsertViewController",
+                        @(2) : @"SelectViewController",
+                        @(3) : @"ShellViewController",
+                        @(4) : @"RadixViewController",
+                        @(5) : @"MergeViewController",
+                        @(6) : @"HeapViewController",
+                        @(7) : @"QuickViewController"
+                        };
+    }
+    return _sortVcDict;
 }
 
 - (NSArray *)sorts{
