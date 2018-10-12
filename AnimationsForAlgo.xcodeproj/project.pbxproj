@@ -150,7 +150,7 @@
 				D736AFF3216CF3DA0054D375 /* quick */,
 				D7CE6595216CEE70009A120D /* merge */,
 				D7CE6591216CED6A009A120D /* heap */,
-				AFFDB722216B485F003D1735 /* Radix */,
+				AFFDB722216B485F003D1735 /* radix */,
 				AF4D8F8E215F6636003B505D /* shell */,
 				AF4D8F82215F6621003B505D /* insert */,
 				AF4D8F85215F6621003B505D /* bubble */,
@@ -254,13 +254,13 @@
 			path = MBProgressHUD;
 			sourceTree = "<group>";
 		};
-		AFFDB722216B485F003D1735 /* Radix */ = {
+		AFFDB722216B485F003D1735 /* radix */ = {
 			isa = PBXGroup;
 			children = (
 				AFFDB723216B4869003D1735 /* RadixViewController.h */,
 				AFFDB724216B4869003D1735 /* RadixViewController.m */,
 			);
-			path = Radix;
+			path = radix;
 			sourceTree = "<group>";
 		};
 		C6FBF80C63B9425C23D23661 /* Frameworks */ = {
