@@ -107,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				AFF4C5EE215E257B004CC287 /* update.sh */,
+				AF4D8F81215F6621003B505D /* Sort */,
 				AFF4C5F2215E27E0004CC287 /* Base */,
 				AFF4C5F0215E2713004CC287 /* Protocol */,
 				AFF4C5D3215DBA5D004CC287 /* Util */,
@@ -127,14 +128,10 @@
 		AF04C7CA215C890600268882 /* AnimationsForAlgo */ = {
 			isa = PBXGroup;
 			children = (
-				AF4D8F81215F6621003B505D /* Sort */,
 				AF04C7CB215C890600268882 /* AppDelegate.h */,
 				AF04C7CC215C890600268882 /* AppDelegate.m */,
 				AF04C7CE215C890600268882 /* ViewController.h */,
 				AF04C7CF215C890600268882 /* ViewController.m */,
-				AFF132B1215CAD5600E7CD8C /* SortViewController.h */,
-				AFF132B2215CAD5600E7CD8C /* SortViewController.m */,
-				AFF132B6215CAEED00E7CD8C /* SortViewController.xib */,
 				AF04C7D1215C890600268882 /* Main.storyboard */,
 				AF04C7D4215C890700268882 /* Assets.xcassets */,
 				AF04C7D6215C890700268882 /* LaunchScreen.storyboard */,
@@ -147,6 +144,9 @@
 		AF4D8F81215F6621003B505D /* Sort */ = {
 			isa = PBXGroup;
 			children = (
+				AFF132B1215CAD5600E7CD8C /* SortViewController.h */,
+				AFF132B2215CAD5600E7CD8C /* SortViewController.m */,
+				AFF132B6215CAEED00E7CD8C /* SortViewController.xib */,
 				D736AFF3216CF3DA0054D375 /* quick */,
 				D7CE6595216CEE70009A120D /* merge */,
 				D7CE6591216CED6A009A120D /* heap */,
