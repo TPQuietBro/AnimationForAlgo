@@ -28,7 +28,6 @@ static CGFloat colMargin = 5;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationItem.title = @"基数排序";
     self.maxNumber = [self maxNumber]; // 找到最大数
     self.loops = [self loopsWithNumber:self.maxNumber]; //找到最大数的位数,当做比较最外层循环次数
     self.baseNumbers = @[@"0",@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9"]; // 基数

@@ -7,6 +7,7 @@
 //
 
 #import "SortViewController.h"
+#import "ControllerInfoManager.h"
 
 @interface SortViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tabelView;
@@ -21,6 +22,8 @@ static NSString *const ID = @"id";
     [super viewDidLoad];
     self.navigationItem.title = @"所有排序算法";
     [self.tabelView registerClass:[UITableViewCell class] forCellReuseIdentifier:ID];
+    _sorts = [ControllerInfoManager sharedInstance].sortTitles;
+    _sortVcDict = [ControllerInfoManager sharedInstance].sortSelectVcDict;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -41,28 +44,6 @@ static NSString *const ID = @"id";
     } else {
         NSAssert(targetVc, @"targetVc is not a UIViewController");
     }
-}
-#pragma mark - getter
-- (NSDictionary *)sortVcDict{
-    if (!_sortVcDict) {
-        _sortVcDict = @{@(0) : @"BubbleViewController",
-                        @(1) : @"InsertViewController",
-                        @(2) : @"SelectViewController",
-                        @(3) : @"ShellViewController",
-                        @(4) : @"RadixViewController",
-                        @(5) : @"MergeViewController",
-                        @(6) : @"HeapViewController",
-                        @(7) : @"QuickViewController"
-                        };
-    }
-    return _sortVcDict;
-}
-
-- (NSArray *)sorts{
-    if (!_sorts) {
-        _sorts = @[@"bubble",@"insert",@"select",@"shell",@"radix",@"merge",@"heap",@"quick"];
-    }
-    return _sorts;
 }
 
 @end

@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "TAlgoProtocol.h"
 #import "UILabel+FastSetting.h"
+#import "ControllerInfoManager.h"
 
 #define Duration [self duration] > 0 ? : 0.5
 #define Count self.examples.count

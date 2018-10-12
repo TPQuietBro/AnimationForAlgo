@@ -16,7 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationItem.title = @"Select";
+//    self.navigationItem.title = @"Select";
 }
 
 - (void)beginAnimation{
