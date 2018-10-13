@@ -1,26 +1,26 @@
 //
-//  QuickViewController.m
+//  MergeViewController.m
 //  AnimationsForAlgo
 //
 //  Created by allentang on 2018/10/9.
 //  Copyright © 2018 唐鹏. All rights reserved.
 //
 
-#import "QuickViewController.h"
+#import "MergeViewController.h"
 
-@interface QuickViewController ()
+@interface MergeViewController ()
 
 @end
 
-@implementation QuickViewController
+@implementation MergeViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationItem.title = @"快速排序";
 }
 
 - (void)beginAnimation{
-    
+    NSMutableArray *tempArray = [NSMutableArray array];
+    [tempArray addObject:@""];
 }
 
 - (void)sort{

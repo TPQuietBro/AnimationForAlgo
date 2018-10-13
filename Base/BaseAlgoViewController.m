@@ -13,6 +13,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationItem.title = [[ControllerInfoManager sharedInstance] sortTitleWithController:[self class]];
     self.view.backgroundColor = [UIColor lightGrayColor];
     [self initCustomBackButton];
     [self initLabels];

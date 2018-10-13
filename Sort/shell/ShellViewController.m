@@ -15,7 +15,6 @@
 static NSInteger k = 0;
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationItem.title = @"Shell";
     
     self.j = Count / 2;
     self.i = self.j;

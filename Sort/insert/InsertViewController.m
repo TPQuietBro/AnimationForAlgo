@@ -1,48 +1,47 @@
 //
-//  SelectViewController.m
+//  InsertViewController.m
 //  AnimationsForAlgo
 //
-//  Created by allentang on 2018/9/28.
-//  Copyright © 2018年 唐鹏. All rights reserved.
+//  Created by 唐鹏 on 2018/9/28.
+//  Copyright © 2018 唐鹏. All rights reserved.
 //
 
-#import "SelectViewController.h"
+#import "InsertViewController.h"
 
-@interface SelectViewController ()
+@interface InsertViewController ()
 
 @end
 
-@implementation SelectViewController
+@implementation InsertViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationItem.title = @"Select";
 }
 
 - (void)beginAnimation{
-    __block NSInteger min = self.j;
     if (self.j == Count) {
         [self afterSorted];
         [self fireTimer];
         return;
     }
-    if (self.i == Count) {
-        self.i = self.j+1;
-        self.j ++;
+    if (self.i == self.j) {
+        self.i = 0;
+        self.j++;
         [self reSetLabelBg];
         return;
     }
+    
+    NSInteger observer = [self.examples[self.j] integerValue];
     UILabel *label = self.labels[self.i];
     label.backgroundColor = [UIColor redColor];
     if (self.i != 0) {
-        UILabel *label = self.labels[self.i - 1];
+        UILabel *label = self.labels[self.i-1];
         label.backgroundColor = [UIColor whiteColor];
     }
-    if ([self.examples[min] integerValue] > [self.examples[self.i] integerValue]) {
+    if (observer < [self.examples[self.i] integerValue]) {
         [self fireTimer];
         [UIView animateWithDuration:Duration animations:^{
-            [self swapArray:self.examples firstIndex:min secondIndex:self.i];
-            min = self.i;
+            [self swapArray:self.examples firstIndex:self.j secondIndex:self.i];
         }completion:^(BOOL finished) {
             [self startTimer];
         }];
