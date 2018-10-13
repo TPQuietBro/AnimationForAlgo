@@ -20,7 +20,8 @@
 }
 
 - (void)beginAnimation{
-    
+    NSMutableArray *tempArray = [NSMutableArray array];
+    [tempArray addObject:@""];
 }
 
 - (void)sort{
