@@ -82,7 +82,7 @@ static CGFloat colMargin = 5;
     // 将前一位标记去掉
     if (self.i != 0) {
         UILabel *label = self.labels[self.i - 1];
-        label.backgroundColor = [UIColor whiteColor];
+        label.backgroundColor = self.defaultBgColor;
     }
     
     // 根据当前循环的次数和示例数字 找到个位,十位......
@@ -196,7 +196,7 @@ static CGFloat colMargin = 5;
 }
 
 - (void)addCpLabelWithLabel:(UILabel *)label originFrame:(CGRect)originFrame{
-    label.tp_bgColor([UIColor whiteColor]);
+    label.tp_bgColor(self.defaultBgColor);
     
     UILabel *cpLabel = [[UILabel alloc] init];
     cpLabel.tp_text(label.text).tp_font(label.font).

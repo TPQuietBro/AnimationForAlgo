@@ -6,8 +6,7 @@
 //  Copyright © 2018 唐鹏. All rights reserved.
 //
 
-#import "BaseAlgoViewController.h"
-
-@interface BubbleViewController : BaseAlgoViewController
+#import "BaseSortAlgoViewController.h"
+@interface BubbleViewController : BaseSortAlgoViewController
 
 @end

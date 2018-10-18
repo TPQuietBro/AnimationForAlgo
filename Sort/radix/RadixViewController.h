@@ -6,8 +6,7 @@
 //  Copyright © 2018 唐鹏. All rights reserved.
 //
 
-#import "BaseAlgoViewController.h"
-
-@interface RadixViewController : BaseAlgoViewController
+#import "BaseSortAlgoViewController.h"
+@interface RadixViewController : BaseSortAlgoViewController
 
 @end

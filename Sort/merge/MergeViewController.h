@@ -6,11 +6,10 @@
 //  Copyright © 2018 唐鹏. All rights reserved.
 //
 
-#import "BaseAlgoViewController.h"
-
+#import "BaseSortAlgoViewController.h"
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MergeViewController : BaseAlgoViewController
+@interface MergeViewController : BaseSortAlgoViewController
 
 @end
 

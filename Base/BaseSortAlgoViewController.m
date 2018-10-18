@@ -1,15 +1,15 @@
 //
-//  BaseAlgoViewController.m
+//  BaseSortAlgoViewController.m
 //  AnimationsForAlgo
 //
 //  Created by 唐鹏 on 2018/9/28.
 //  Copyright © 2018 唐鹏. All rights reserved.
 
-#import "BaseAlgoViewController.h"
+#import "BaseSortAlgoViewController.h"
 
-@interface BaseAlgoViewController ()
+@interface BaseSortAlgoViewController ()
 @end
-@implementation BaseAlgoViewController
+@implementation BaseSortAlgoViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -18,7 +18,9 @@
     [self initCustomBackButton];
     [self initLabels];
     [self startTimer];
-    
+    self.defaultBgColor = [UIColor colorWithRed:79/255.0 green:167/255.0 blue:246/255.0 alpha:1];
+    self.defaultTextColor = [UIColor whiteColor];
+    self.defaultFont = [UIFont boldSystemFontOfSize:13];
 }
 
 - (void)initCustomBackButton{
@@ -43,8 +45,8 @@
     
     for (NSInteger i = 0; i < self.examples.count; ++i) {
         UILabel *numLable = [[UILabel alloc] init];
-        numLable.tp_font(@12).tp_text(self.examples[i]).tp_systemTextColor(ENBlackColor).tp_alignment(ENTextAlighmentCenter);
-        numLable.tp_bgColor([UIColor whiteColor]);
+        numLable.tp_font(self.defaultFont).tp_text(self.examples[i]).tp_customTextColor(self.defaultTextColor).tp_alignment(ENTextAlighmentCenter);
+        numLable.tp_bgColor(self.defaultBgColor);
         numLable.frame = CGRectMake(leftMargin + i * (width + labelMargin), 100, width, height);
         [self.view addSubview:numLable];
         [self.labels addObject:numLable];

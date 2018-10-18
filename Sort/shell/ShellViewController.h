@@ -6,8 +6,7 @@
 //  Copyright © 2018 唐鹏. All rights reserved.
 //
 
-#import "BaseAlgoViewController.h"
-
-@interface ShellViewController : BaseAlgoViewController
+#import "BaseSortAlgoViewController.h"
+@interface ShellViewController : BaseSortAlgoViewController
 
 @end

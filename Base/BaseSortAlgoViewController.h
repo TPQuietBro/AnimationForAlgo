@@ -1,5 +1,5 @@
 //
-//  BaseAlgoViewController.h
+//  BaseSortAlgoViewController.h
 //  AnimationsForAlgo
 //
 //  Created by 唐鹏 on 2018/9/28.
@@ -17,11 +17,14 @@
 static CGFloat width = 25;
 static CGFloat height = 35;
 
-@interface BaseAlgoViewController : UIViewController<TAlgoProtocol>
+@interface BaseSortAlgoViewController : UIViewController<TAlgoProtocol>
 @property (nonatomic, strong) NSMutableArray *examples;
 @property (nonatomic, strong) NSMutableArray *labels;
 @property (nonatomic, strong) NSTimer *timer;
 @property (nonatomic, assign) NSInteger i; 
 @property (nonatomic, assign) NSInteger j;
 @property (nonatomic, assign) NSInteger k;
+@property (nonatomic, strong) UIColor *defaultBgColor;
+@property (nonatomic, strong) UIColor *defaultTextColor;
+@property (nonatomic, strong) UIFont *defaultFont;
 @end

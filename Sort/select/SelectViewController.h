@@ -6,10 +6,9 @@
 //  Copyright © 2018年 唐鹏. All rights reserved.
 //
 
-#import "BaseAlgoViewController.h"
-
+#import "BaseSortAlgoViewController.h"
 NS_ASSUME_NONNULL_BEGIN
-@interface SelectViewController : BaseAlgoViewController
+@interface SelectViewController : BaseSortAlgoViewController
 
 @end
 
