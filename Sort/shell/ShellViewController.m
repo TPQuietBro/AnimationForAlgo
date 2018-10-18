@@ -48,7 +48,7 @@ static NSInteger k = 0;
     label.backgroundColor = [UIColor redColor];
     if (k-self.j != 0) {
         UILabel *label = self.labels[k-self.j];
-        label.backgroundColor = [UIColor whiteColor];
+        label.backgroundColor = self.defaultBgColor;
     }
     
     if ([self.examples[k] integerValue] < [self.examples[k-self.j] integerValue]) {

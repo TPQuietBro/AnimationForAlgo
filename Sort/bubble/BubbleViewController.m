@@ -33,7 +33,7 @@
     label.backgroundColor = [UIColor redColor];
     if (self.i != 0) {
         UILabel *label = self.labels[self.i - 1];
-        label.backgroundColor = [UIColor whiteColor];
+        label.backgroundColor = self.defaultBgColor;
     }
     if ([self.examples[self.i] integerValue] > [self.examples[self.i+1] integerValue]) {
         [self fireTimer];

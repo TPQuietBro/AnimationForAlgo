@@ -199,7 +199,7 @@ static CGFloat colMargin = 5;
     label.tp_bgColor(self.defaultBgColor);
     
     UILabel *cpLabel = [[UILabel alloc] init];
-    cpLabel.tp_text(label.text).tp_font(label.font).
+    cpLabel.tp_text(label.text).tp_font(label.font).tp_customTextColor(label.textColor).
     tp_alignment(ENTextAlighmentCenter).tp_bgColor(label.backgroundColor);
     cpLabel.frame = label.frame;
     [self.view addSubview:cpLabel];

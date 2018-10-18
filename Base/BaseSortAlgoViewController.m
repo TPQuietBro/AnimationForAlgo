@@ -16,11 +16,11 @@
     self.navigationItem.title = [[ControllerInfoManager sharedInstance] sortTitleWithController:[self class]];
     self.view.backgroundColor = [UIColor lightGrayColor];
     [self initCustomBackButton];
-    [self initLabels];
     [self startTimer];
     self.defaultBgColor = [UIColor colorWithRed:79/255.0 green:167/255.0 blue:246/255.0 alpha:1];
     self.defaultTextColor = [UIColor whiteColor];
     self.defaultFont = [UIFont boldSystemFontOfSize:13];
+    [self initLabels];
 }
 
 - (void)initCustomBackButton{
@@ -91,7 +91,7 @@
 
 - (void)reSetLabelBg{
     for (UILabel *label in self.labels) {
-        label.backgroundColor = [UIColor whiteColor];
+        label.backgroundColor = self.defaultBgColor;
     }
 }
 
