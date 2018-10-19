@@ -19,8 +19,8 @@
     return single;
 }
 
-- (NSString *)sortTitleWithController:(Class)controllerCls{
-    NSString *vcName = NSStringFromClass(controllerCls);
+- (NSString *)sortTitleWithController:(UIViewController *)controller{
+    NSString *vcName = NSStringFromClass([controller class]);
     NSString *title = [self vcTitleDict][vcName];
     NSAssert(title, @"title is not exist");
     return title;
