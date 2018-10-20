@@ -14,7 +14,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationItem.title = [[ControllerInfoManager sharedInstance] sortTitleWithController:[self class]];
+    self.navigationItem.title = [[ControllerInfoManager sharedInstance] sortTitleWithController:self];
     self.view.backgroundColor = [UIColor lightGrayColor];
     [self initCustomBackButton];
     [self startTimer];
