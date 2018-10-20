@@ -266,14 +266,4 @@ static CGFloat colMargin = 5;
     });
 }
 
-- (void)showFinishHud{
-    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    hud.mode = MBProgressHUDModeText;
-    hud.labelText = @"排序完成";
-    [hud show:YES];
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [hud hide:YES];
-    });
-}
-
 @end

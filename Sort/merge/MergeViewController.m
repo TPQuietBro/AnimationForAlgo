@@ -9,18 +9,32 @@
 #import "MergeViewController.h"
 
 @interface MergeViewController ()
-
+@property (nonatomic,assign) NSInteger start;
+@property (nonatomic,assign) NSInteger end;
+@property (nonatomic,assign) NSInteger mid;
+@property (nonatomic,strong) NSMutableArray *tempArray;
 @end
 
 @implementation MergeViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    // 初始化值
+    self.start = 0;
+    self.end = Count - 1;
+    self.mid = (self.start + self.end) * 0.5;
+    [self showBeginHud];
 }
 
+// 左侧timer
 - (void)beginAnimation{
-    NSMutableArray *tempArray = [NSMutableArray array];
-    [tempArray addObject:@""];
+    _tempArray = [NSMutableArray array];
+
+    if (self.start >= self.end) {
+        [self showFinishHud];
+        return;
+    }
+    
 }
 
 - (void)sort{

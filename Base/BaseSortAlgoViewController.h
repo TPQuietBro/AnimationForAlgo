@@ -27,4 +27,6 @@ static CGFloat height = 35;
 @property (nonatomic, strong) UIColor *defaultBgColor;
 @property (nonatomic, strong) UIColor *defaultTextColor;
 @property (nonatomic, strong) UIFont *defaultFont;
+- (void)showBeginHud;
+- (void)showFinishHud;
 @end
