@@ -75,11 +75,11 @@
         return;
     }
     NSInteger mid = (start + end) * 0.5;
-    NSLog(@"start1:%zd end1:%zd",start,mid);
+//    NSLog(@"start1:%zd end1:%zd",start,mid);
     [self split:arr start:start end:mid];
-    NSLog(@"start2:%zd end:%zd",mid + 1,end);
+//    NSLog(@"start2:%zd end:%zd",mid + 1,end);
     [self split:arr start:mid + 1 end:end];
-    NSLog(@"start23:%zd end:%zd mid:%zd",start,end,mid);
+//    NSLog(@"start23:%zd end:%zd mid:%zd",start,end,mid);
     [self merge:arr start:start end:end mid:mid];
 }
 
