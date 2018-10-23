@@ -42,7 +42,7 @@
 
 - (void)initLabels{
     CGFloat leftMargin = 30;
-    CGFloat labelMargin = (self.view.frame.size.width - self.examples.count * width - leftMargin * 2) / (self.examples.count - 1);
+    CGFloat labelMargin = (ViewWidth - Count * width - leftMargin * 2) / (Count - 1);
     
     for (NSInteger i = 0; i < self.examples.count; ++i) {
         UILabel *numLable = [[UILabel alloc] init];

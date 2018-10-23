@@ -13,6 +13,7 @@
 - (void)reSetLabelBg;
 - (void)swapArray:(NSMutableArray *)array firstIndex:(NSInteger)first secondIndex:(NSInteger)second;
 - (void)popVc;
+- (void)initLabels;
 @optional
 - (void)sort;
 - (void)afterSorted;

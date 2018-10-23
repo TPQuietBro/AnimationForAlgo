@@ -7,7 +7,6 @@
 //
 
 #import "RadixViewController.h"
-#import "TPFrame.h"
 #import "MBProgressHUD.h"
 static NSInteger colSize = 9;
 static CGFloat margin = 7.5;

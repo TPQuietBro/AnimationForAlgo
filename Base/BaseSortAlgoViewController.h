@@ -10,9 +10,12 @@
 #import "TAlgoProtocol.h"
 #import "UILabel+FastSetting.h"
 #import "ControllerInfoManager.h"
+#import "TPFrame.h"
 
 #define Duration [self duration] > 0 ? : 0.5
 #define Count self.examples.count
+#define ViewWidth self.view.frame.size.width
+#define ViewHeight self.view.frame.size.height
 
 static CGFloat width = 25;
 static CGFloat height = 35;
