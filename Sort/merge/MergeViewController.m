@@ -13,7 +13,6 @@
 @property (nonatomic,assign) NSInteger end;
 @property (nonatomic,assign) NSInteger mid;
 @property (nonatomic,strong) NSMutableArray *tempArray;
-@property (nonatomic,strong) NSTimer *tempTimer;
 @end
 
 @implementation MergeViewController
@@ -27,7 +26,6 @@
     [self sort];
     [self showBeginHud];
     [self adjustLabels];
-    [self startTempTimer];
 }
 
 - (void)adjustLabels{
@@ -38,53 +36,35 @@
     }
 }
 
-- (void)startTempTimer{
-    NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:Duration target:self selector:@selector(beginSecondAnimation) userInfo:nil repeats:YES];
-//    [[NSRunLoop currentRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
-    _tempTimer = timer;
-}
-
-- (void)beginSecondAnimation{
-    if (self.start >= self.end) {
-        [self afterSorted];
-        return;
-    }
-    NSLog(@"self.mid : %zd",self.mid);
-    if (self.j > self.end) {
-        [self fireTempTimer];
-        return;
-    }
-    UILabel *tempLabel = self.labels[self.j];
-    [UIView animateWithDuration:Duration animations:^{
-        [self fireTempTimer];
-        tempLabel.x += 5;
-        tempLabel.y += height + 10;
-        [self.labels replaceObjectAtIndex:self.j withObject:tempLabel];
-    } completion:^(BOOL finished) {
-        self.j ++;
-        [self startTempTimer];
-    }];
-    
-}
-
 - (void)beginAnimation{
     
     if (self.start >= self.end) {
         [self afterSorted];
         return;
     }
-    if (self.i == self.mid) {
+    
+    if (self.i > self.mid || self.j > self.end) {
         [self fireTimer];
+//        self.i = 0;
+//        self.mid = (self.mid + self.start) * 0.5;
+//        self.j = self.mid + 1;
         return;
     }
-    UILabel *tempLabel = self.labels[self.i];
+    UILabel *leftLabel = self.labels[self.i];
+    UILabel *rightLabel = self.labels[self.j];
     [UIView animateWithDuration:Duration animations:^{
         [self fireTimer];
-        tempLabel.x -= 5;
-        tempLabel.y += height + 10;
-        [self.labels replaceObjectAtIndex:self.i withObject:tempLabel];
+        leftLabel.x -= 5;
+        leftLabel.y += height + 10;
+        [self.labels replaceObjectAtIndex:self.i withObject:leftLabel];
+        
+        rightLabel.x += 5;
+        rightLabel.y += height + 10;
+        [self.labels replaceObjectAtIndex:self.i withObject:rightLabel];
+        
     } completion:^(BOOL finished) {
         self.i ++;
+        self.j ++;
         [self startTimer];
     }];
 //    NSMutableArray *tempArray = [NSMutableArray array];
@@ -127,23 +107,14 @@
         return;
     }
     NSInteger mid = (start + end) * 0.5;
-//    NSLog(@"start1:%zd end1:%zd",start,mid);
     [self split:arr start:start end:mid];
-//    NSLog(@"start2:%zd end:%zd",mid + 1,end);
     [self split:arr start:mid + 1 end:end];
-//    NSLog(@"start23:%zd end:%zd mid:%zd",start,end,mid);
     [self merge:arr start:start end:end mid:mid];
-}
-
-- (void)fireTempTimer{
-    [self.tempTimer invalidate];
-    self.tempTimer = nil;
 }
 
 - (void)popVc{
     [self.navigationController popViewControllerAnimated:YES];
     [self fireTimer];
-    [self fireTempTimer];
 }
 
 @end
