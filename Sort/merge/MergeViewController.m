@@ -26,6 +26,7 @@
     [self sort];
     [self showBeginHud];
     [self adjustLabels];
+    _tempArray = [NSMutableArray array];
 }
 
 - (void)adjustLabels{
@@ -52,6 +53,8 @@
     }
     UILabel *leftLabel = self.labels[self.i];
     UILabel *rightLabel = self.labels[self.j];
+    [_tempArray insertObject:leftLabel atIndex:self.i];
+    [_tempArray insertObject:rightLabel atIndex:self.j];
     [UIView animateWithDuration:Duration animations:^{
         [self fireTimer];
         leftLabel.x -= 5;
