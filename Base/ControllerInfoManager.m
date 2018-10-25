@@ -60,4 +60,11 @@
     }
     return _sortTitles;
 }
+
+- (NSArray *)categories{
+    if (!_categories) {
+        _categories = @[@"Sort",@"Tree"];
+    }
+    return _categories;
+}
 @end

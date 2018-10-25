@@ -10,6 +10,7 @@
 
 @interface ControllerInfoManager : NSObject
 + (instancetype)sharedInstance;
+@property (nonatomic, strong) NSArray *categories;
 @property (nonatomic, strong) NSDictionary *sortSelectVcDict;
 @property (nonatomic, strong) NSArray *vcNames;
 @property (nonatomic, strong) NSArray *sortTitles;

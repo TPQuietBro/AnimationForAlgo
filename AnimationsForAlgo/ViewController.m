@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "SortViewController.h"
 #include<math.h>
+#import "ControllerInfoManager.h"
 
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -20,6 +21,7 @@ static NSString *const ID = @"UITableViewCell";
     [super viewDidLoad];
     self.navigationItem.title = @"所有类别";
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:ID];
+    _categories = [ControllerInfoManager sharedInstance].categories;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -37,13 +39,4 @@ static NSString *const ID = @"UITableViewCell";
         [self.navigationController pushViewController:[SortViewController new] animated:YES];
     }
 }
-
-- (NSArray *)categories{
-    if (!_categories) {
-        _categories = @[@"Sort",@"Tree"];
-    }
-    return _categories;
-}
-
-
 @end
