@@ -46,15 +46,16 @@
     
     if (self.i > self.mid || self.j > self.end) {
         [self fireTimer];
-//        self.i = 0;
-//        self.mid = (self.mid + self.start) * 0.5;
-//        self.j = self.mid + 1;
+        self.i = 0;
+        self.mid = (self.mid + self.start) * 0.5;
+        self.j = self.mid + 1;
+        NSLog(@"i : %zd j : %zd mid : %zd",self.i,self.j,self.k);
+        [self startTimer];
         return;
     }
     UILabel *leftLabel = self.labels[self.i];
     UILabel *rightLabel = self.labels[self.j];
-    [_tempArray insertObject:leftLabel atIndex:self.i];
-    [_tempArray insertObject:rightLabel atIndex:self.j];
+
     [UIView animateWithDuration:Duration animations:^{
         [self fireTimer];
         leftLabel.x -= 5;
