@@ -38,7 +38,6 @@
 }
 
 - (void)beginAnimation{
-    
     if (self.start >= self.end) {
         [self afterSorted];
         return;
@@ -103,6 +102,7 @@
     for (NSInteger i = 0; i< k; i++) {
         arr[start + i] = tempArray[i];
     }
+
     NSLog(@"tempArray:%@",tempArray);
 }
 
