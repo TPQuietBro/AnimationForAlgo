@@ -12,7 +12,7 @@
 #import "ControllerInfoManager.h"
 #import "TPFrame.h"
 
-#define Duration [self duration] > 0 ? : 0.5
+#define Duration [self duration] > 0 ? [self duration] : 0.5
 #define Count self.examples.count
 #define ViewWidth self.view.frame.size.width
 #define ViewHeight self.view.frame.size.height

@@ -48,6 +48,8 @@
         UILabel *numLable = [[UILabel alloc] init];
         numLable.tp_font(self.defaultFont).tp_text(self.examples[i]).tp_customTextColor(self.defaultTextColor).tp_alignment(ENTextAlighmentCenter);
         numLable.tp_bgColor(self.defaultBgColor);
+        numLable.layer.cornerRadius = 4;
+        numLable.layer.masksToBounds = YES;
         numLable.frame = CGRectMake(leftMargin + i * (width + labelMargin), 100, width, height);
         [self.view addSubview:numLable];
         [self.labels addObject:numLable];

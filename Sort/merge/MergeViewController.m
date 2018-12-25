@@ -7,11 +7,12 @@
 //
 
 #import "MergeViewController.h"
-
+#define DEEP [self totalDeep]
 @interface MergeViewController ()
 @property (nonatomic,assign) NSInteger start;
 @property (nonatomic,assign) NSInteger end;
 @property (nonatomic,assign) NSInteger mid;
+@property (nonatomic,assign) NSInteger deep;
 @property (nonatomic,strong) NSMutableArray *tempArray;
 @end
 
@@ -21,7 +22,7 @@
     [super viewDidLoad];
     self.start = 0;
     self.end = Count - 1;
-    self.mid = (self.start + self.end) * 0.5;
+    self.mid = Count * 0.5;
     self.j = self.mid + 1;
     [self sort];
     [self showBeginHud];
@@ -38,40 +39,48 @@
 }
 
 - (void)beginAnimation{
-    if (self.start >= self.end) {
-        [self afterSorted];
+    if (self.start >= Count) {
+        self.start = 0;
+        return;
+    }
+    UILabel *label = self.labels[self.start];
+    NSLog(@"start : %zd,end : %zd,mid : %zd",self.start,self.end,self.mid);
+    
+    if (self.start >= self.mid) {
+        label.x += 20;
+    } else {
+        label.x -= 20;
+    }
+    label.y += label.height + 10;
+    
+    if (self.start == self.end) {
+        NSLog(@"deep + 1");
+        NSInteger end = self.end;
+        ++self.deep;
+        self.start = 0;
+        self.mid = self.mid * 0.5;
+        self.end = end / pow(2,self.deep);
         return;
     }
     
-    if (self.i > self.mid || self.j > self.end) {
-        [self fireTimer];
-        self.i = 0;
-        self.mid = (self.mid + self.start) * 0.5;
-        self.j = self.mid + 1;
-        NSLog(@"i : %zd j : %zd mid : %zd",self.i,self.j,self.k);
-        [self startTimer];
-        return;
-    }
-    UILabel *leftLabel = self.labels[self.i];
-    UILabel *rightLabel = self.labels[self.j];
-
-    [UIView animateWithDuration:Duration animations:^{
-        [self fireTimer];
-        leftLabel.x -= 5;
-        leftLabel.y += height + 10;
-        [self.labels replaceObjectAtIndex:self.i withObject:leftLabel];
-        
-        rightLabel.x += 5;
-        rightLabel.y += height + 10;
-        [self.labels replaceObjectAtIndex:self.i withObject:rightLabel];
-        
-    } completion:^(BOOL finished) {
-        self.i ++;
-        self.j ++;
-        [self startTimer];
-    }];
-//    NSMutableArray *tempArray = [NSMutableArray array];
+    self.start ++;
 }
+
+- (NSTimeInterval)duration{
+    return 0.2;
+}
+
+- (NSInteger)totalDeep{
+    NSInteger count = 0;
+    NSInteger total = self.labels.count;
+    while (total / 2 > 0) {
+        total /= 2;
+        count++;
+    }
+    return count+1;
+}
+
+#pragma mark - sort
 
 - (void)sort{
     [self split:self.examples start:0 end:Count - 1];
