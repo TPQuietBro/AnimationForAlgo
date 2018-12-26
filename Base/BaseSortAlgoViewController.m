@@ -138,7 +138,7 @@
 #pragma mark - getter
 - (NSMutableArray *)examples{
     if (!_examples) {
-        _examples = [@[@"49",@"38",@"65",@"97",@"76",@"13",@"27",@"49",@"55",@"04"] mutableCopy];
+        _examples = [@[@"49",@"38",@"65",@"97",@"76",@"13",@"27",@"49"] mutableCopy];
     }
     return _examples;
 }

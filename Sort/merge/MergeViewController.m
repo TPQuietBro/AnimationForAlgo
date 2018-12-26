@@ -39,10 +39,6 @@
 }
 
 - (void)beginAnimation{
-    if (self.start >= Count) {
-        self.start = 0;
-        return;
-    }
     UILabel *label = self.labels[self.start];
     NSLog(@"start : %zd,end : %zd,mid : %zd",self.start,self.end,self.mid);
     
@@ -54,12 +50,18 @@
     label.y += label.height + 10;
     
     if (self.start == self.end) {
-        NSLog(@"deep + 1");
         NSInteger end = self.end;
-        ++self.deep;
-        self.start = 0;
-        self.mid = self.mid * 0.5;
-        self.end = end / pow(2,self.deep);
+    
+        if (self.start < Count - 1) {
+            self.start = self.end + 1;
+            self.end = end * pow(2,self.deep);
+        } else {
+            NSLog(@"deep + 1");
+            ++self.deep;
+            self.start = 0;
+            self.end = end / pow(2, self.deep);
+        }
+        self.mid = (self.start + self.end) * 0.5;
         return;
     }
     
