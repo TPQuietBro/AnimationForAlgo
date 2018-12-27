@@ -7,7 +7,11 @@
 //
 
 #import "MergeViewController.h"
+
 #define DEEP [self totalDeep]
+
+static CGFloat margin = 30;
+
 @interface MergeViewController ()
 @property (nonatomic,assign) NSInteger start;
 @property (nonatomic,assign) NSInteger end;
@@ -30,6 +34,8 @@
     [self adjustLabels];
     _tempArray = [NSMutableArray array];
     [self initEndDict];
+    margin = 30;
+    NSLog(@"endDict : %@",self.endDict);
 }
 
 // 找到潜在的分界点
@@ -55,7 +61,6 @@
         label.frame = CGRectMake(LRMargin + i * width, 100, width, height);
     }
 }
-CGFloat margin = 30;
 - (void)beginAnimation{
     
     // 如果到最大深度就停止
@@ -65,8 +70,40 @@ CGFloat margin = 30;
         return;
     }
     
+    NSArray *endIndexes = self.endDict[@(self.deep)];
+    NSInteger split = endIndexes.count - 1;
+    
+    if (self.start == self.end) {
+        self.i ++;
+        
+        
+        if (self.i > split) {
+            
+            self.i = 0;
+            self.start = 0;
+            //        self.end = [endIndexes[self.i] integerValue];
+            //        self.mid = (self.start + self.end) * 0.5;
+            self.deep++;
+            NSLog(@"deep + 1");
+            return;
+        }
+        
+        if (self.i <= split) {
+            self.start = self.i * (Count / pow(2, self.deep));
+            //            if (split > 1) {
+            //                self.end = [endIndexes[self.i] integerValue];
+            //            }
+            //            self.mid = (self.start + self.end) * 0.5;
+            self.mid = (self.start + self.end) * 0.5;
+        }
+//        NSLog(@"start : %zd,end : %zd,mid : %zd,deep:%zd,i:%zd",self.start,self.end,self.mid,self.deep,self.i);
+    }
+    
+    self.end = [endIndexes[self.i] integerValue];
+    
+    
     UILabel *label = self.labels[self.start];
-    NSLog(@"start : %zd,end : %zd,mid : %zd",self.start,self.end,self.mid);
+    NSLog(@"start : %zd,end : %zd,mid : %zd,deep:%zd,i:%zd",self.start,self.end,self.mid,self.deep,self.i);
     if (self.deep > 0) {
         margin -= 5;
     }
@@ -76,28 +113,6 @@ CGFloat margin = 30;
         label.x -= margin;
     }
     label.y += label.height + 10;
-    
-    NSArray *endIndexes = self.endDict[@(self.deep)];
-    NSInteger split = endIndexes.count;
-    
-
-    
-//    if (self.start == self.end) {
-//        NSInteger end = self.end;
-//
-//        if (self.start < Count - 1) {
-//            self.start = self.end + 1;
-//            self.end = self.lastEnd;
-//        } else {
-//            ++self.deep;
-//            self.lastEnd = self.end;
-//            NSLog(@"deep + 1 ,lastEnd:%zd",self.lastEnd);
-//            self.start = 0;
-//            self.end = end / pow(2, self.deep);
-//        }
-//        self.mid = (self.start + self.end) * 0.5;
-//        return;
-//    }
     
     self.start ++;
 }
