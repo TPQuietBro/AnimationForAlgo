@@ -13,7 +13,9 @@
 @property (nonatomic,assign) NSInteger end;
 @property (nonatomic,assign) NSInteger mid;
 @property (nonatomic,assign) NSInteger deep;
+@property (nonatomic,assign) NSInteger lastEnd;
 @property (nonatomic,strong) NSMutableArray *tempArray;
+@property (nonatomic, strong) NSMutableDictionary *endDict;
 @end
 
 @implementation MergeViewController
@@ -22,12 +24,28 @@
     [super viewDidLoad];
     self.start = 0;
     self.end = Count - 1;
-    self.mid = Count * 0.5;
-    self.j = self.mid + 1;
+    self.mid = self.end * 0.5;
     [self sort];
     [self showBeginHud];
     [self adjustLabels];
     _tempArray = [NSMutableArray array];
+    [self initEndDict];
+}
+
+// 找到潜在的分界点
+- (void)initEndDict{
+    _endDict = [NSMutableDictionary dictionary];
+    
+    for (NSInteger i=0; i < [self totalDeep]; ++i) {
+        
+        NSInteger split = pow(2, i);
+        NSMutableArray *tempArray = [NSMutableArray array];
+        for (NSInteger j = 0; j < split; ++j) {
+            NSNumber *end = @(Count / split - 1 + j * (Count / split));
+            [tempArray addObject:end];
+        }
+        [_endDict setObject:tempArray forKey:@(i)];
+    }
 }
 
 - (void)adjustLabels{
@@ -37,33 +55,49 @@
         label.frame = CGRectMake(LRMargin + i * width, 100, width, height);
     }
 }
-
+CGFloat margin = 30;
 - (void)beginAnimation{
+    
+    // 如果到最大深度就停止
+    if (self.deep == [self totalDeep]) {
+        [self fireTimer];
+        [self showFinishHud];
+        return;
+    }
+    
     UILabel *label = self.labels[self.start];
     NSLog(@"start : %zd,end : %zd,mid : %zd",self.start,self.end,self.mid);
-    
-    if (self.start >= self.mid) {
-        label.x += 20;
+    if (self.deep > 0) {
+        margin -= 5;
+    }
+    if (self.start > self.mid) {
+        label.x += margin;
     } else {
-        label.x -= 20;
+        label.x -= margin;
     }
     label.y += label.height + 10;
     
-    if (self.start == self.end) {
-        NSInteger end = self.end;
+    NSArray *endIndexes = self.endDict[@(self.deep)];
+    NSInteger split = endIndexes.count;
     
-        if (self.start < Count - 1) {
-            self.start = self.end + 1;
-            self.end = end * pow(2,self.deep);
-        } else {
-            NSLog(@"deep + 1");
-            ++self.deep;
-            self.start = 0;
-            self.end = end / pow(2, self.deep);
-        }
-        self.mid = (self.start + self.end) * 0.5;
-        return;
-    }
+
+    
+//    if (self.start == self.end) {
+//        NSInteger end = self.end;
+//
+//        if (self.start < Count - 1) {
+//            self.start = self.end + 1;
+//            self.end = self.lastEnd;
+//        } else {
+//            ++self.deep;
+//            self.lastEnd = self.end;
+//            NSLog(@"deep + 1 ,lastEnd:%zd",self.lastEnd);
+//            self.start = 0;
+//            self.end = end / pow(2, self.deep);
+//        }
+//        self.mid = (self.start + self.end) * 0.5;
+//        return;
+//    }
     
     self.start ++;
 }
@@ -79,7 +113,7 @@
         total /= 2;
         count++;
     }
-    return count+1;
+    return count;
 }
 
 #pragma mark - sort
