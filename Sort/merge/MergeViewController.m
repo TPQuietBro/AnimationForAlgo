@@ -18,7 +18,6 @@ static CGFloat defaultVerticalMargin = 10;
 @property (nonatomic,assign) NSInteger end;
 @property (nonatomic,assign) NSInteger mid;
 @property (nonatomic,assign) NSInteger deep;
-@property (nonatomic,assign) NSInteger lastEnd;
 @property (nonatomic,strong) NSMutableArray *tempArray;
 @property (nonatomic, strong) NSMutableDictionary *endDict;
 @end
