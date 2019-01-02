@@ -18,7 +18,6 @@ static CGFloat defaultVerticalMargin = 10;
 @property (nonatomic,assign) NSInteger end;
 @property (nonatomic,assign) NSInteger mid;
 @property (nonatomic,assign) NSInteger deep;
-@property (nonatomic,assign) NSInteger lastEnd;
 @property (nonatomic,strong) NSMutableArray *tempArray;
 @property (nonatomic, strong) NSMutableDictionary *endDict;
 @end
@@ -72,7 +71,8 @@ static CGFloat defaultVerticalMargin = 10;
     // 如果到最大深度就停止
     if (self.deep == [self totalDeep]) {
         [self fireTimer];
-        [self showFinishHud];
+//        [self showFinishHud];
+        [self merge];
         return;
     }
     
@@ -112,6 +112,10 @@ static CGFloat defaultVerticalMargin = 10;
     } else {
         self.start ++;
     }
+}
+
+- (void)merge{
+    
 }
 
 - (NSTimeInterval)duration{
