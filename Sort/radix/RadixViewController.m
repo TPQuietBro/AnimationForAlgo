@@ -41,7 +41,7 @@ static CGFloat colMargin = 5;
     
     // 最外层循环控制j
     if (self.j == self.loops) {
-        [self showFinishHud];
+        [self showHudWithTip:kFinishSort];
         [self fireTimer];
         return;
     }
