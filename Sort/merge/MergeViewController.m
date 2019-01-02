@@ -17,9 +17,12 @@ static CGFloat defaultVerticalMargin = 10;
 @property (nonatomic,assign) NSInteger start;
 @property (nonatomic,assign) NSInteger end;
 @property (nonatomic,assign) NSInteger mid;
-@property (nonatomic,assign) NSInteger deep;
+@property (nonatomic,assign) NSInteger deep1;
+@property (nonatomic,assign) NSInteger deep2;
 @property (nonatomic,strong) NSMutableArray *tempArray;
 @property (nonatomic, strong) NSMutableDictionary *endDict;
+@property (nonatomic, strong) NSMutableArray *margins;
+@property (nonatomic,assign) BOOL isFinishSpliting;
 @end
 
 @implementation MergeViewController
@@ -33,6 +36,7 @@ static CGFloat defaultVerticalMargin = 10;
     [self showHudWithTip:kStartSort];
     [self adjustLabels];
     _tempArray = [NSMutableArray array];
+    _margins = [NSMutableArray array];
     [self initEndDict];
     NSLog(@"endDict : %@",self.endDict);
 }
@@ -64,21 +68,89 @@ static CGFloat defaultVerticalMargin = 10;
     }
 }
 - (void)beginAnimation{
-    [self split];
+    __weak typeof(self) wSelf = self;
+    [self splitWithBlock:^{
+        [wSelf startTimer];
+    }];
+    [self merge];
 }
 
-- (void)split{
+- (void)merge{
+    if (!self.isFinishSpliting) {
+        return;
+    }
+    
+    if (self.deep2 < 0) {
+        [self showHudWithTip:kFinishSort];
+        [self fireTimer];
+        return;
+    }
+    
+    UILabel *label = self.labels[self.start];
+    // 根据深度来设置间隔
+    CGFloat margin = [self.margins[self.deep2] floatValue];
+    NSLog(@"start:%zd,mid:%zd,end:%zd",self.start,self.mid,self.end);
+    if (self.start > self.mid) {
+        label.x -= margin;
+    } else {
+        label.x += margin;
+    }
+    label.y += label.height + defaultVerticalMargin;
+    
+    if (self.start == self.end) {
+        self.j++;
+        NSArray *endIndexes = self.endDict[@(self.deep2)];
+        NSInteger split = endIndexes.count - 1;
+        
+        if (self.j > split) {
+            self.j = 0;
+            self.start = 0;
+            self.deep2--;
+            
+            endIndexes = self.endDict[@(self.deep2)];
+            self.end = [endIndexes[self.j] integerValue];
+            self.mid = (self.start + self.end) * 0.5;
+            return;
+        }
+        self.start = self.j * (Count / pow(2, self.deep2));
+        self.end = [endIndexes[self.j] integerValue];
+        self.mid = (self.start + self.end) * 0.5;
+        
+    } else {
+        self.start ++;
+    }
+}
+
+- (void)splitWithBlock:(void(^)(void))block{
     // 如果到最大深度就停止
-    if (self.deep == [self totalDeep]) {
+    
+    if (self.deep1 > [self totalDeep]) {
+        return;
+    }
+    
+    if (self.deep1 == [self totalDeep]) {
+        self.deep2 = self.deep1 - 1;
+        self.deep1 ++;//++的目的是为了只赋值一次
+        
+        NSArray *endIndexes = self.endDict[@(self.deep2)];
+        self.start = 0;
+        self.end = [endIndexes[0] integerValue];
+        self.mid = (self.start + self.end) * 0.5;
         [self fireTimer];
         [self showHudWithTip:@"分割完成,马上开始归并"];
+        self.isFinishSpliting = YES;
+        block ? block() : nil;
         return;
     }
     
     UILabel *label = self.labels[self.start];
     //    NSLog(@"start : %zd,end : %zd,mid : %zd,deep:%zd,i:%zd",self.start,self.end,self.mid,self.deep,self.i);
     // 根据深度来设置间隔
-    CGFloat margin = defaultHorizonalMargin / pow(2, self.deep);
+    CGFloat margin = defaultHorizonalMargin / pow(2, self.deep1);
+    
+    if (![_margins containsObject:@(margin)]) {
+        [_margins addObject:@(margin)];
+    }
     
     if (self.start > self.mid) {
         label.x += margin;
@@ -89,22 +161,22 @@ static CGFloat defaultVerticalMargin = 10;
     
     if (self.start == self.end) {
         self.i ++;
-        NSArray *endIndexes = self.endDict[@(self.deep)];
+        NSArray *endIndexes = self.endDict[@(self.deep1)];
         NSInteger split = endIndexes.count - 1;
         //        NSLog(@"===start : %zd,end : %zd,split:%zd,i:%zd",self.start,self.end,split,self.i);
         // 重置开始和结束的位置
         if (self.i > split) {
             self.i = 0;
             self.start = 0;
-            self.deep++;
+            self.deep1++;
             
-            endIndexes = self.endDict[@(self.deep)];
+            endIndexes = self.endDict[@(self.deep1)];
             self.end = [endIndexes[self.i] integerValue];
             self.mid = (self.start + self.end) * 0.5;
             //            NSLog(@"deep + 1,end:%zd",self.end);
             return;
         }
-        self.start = self.i * (Count / pow(2, self.deep));
+        self.start = self.i * (Count / pow(2, self.deep1));
         self.end = [endIndexes[self.i] integerValue];
         self.mid = (self.start + self.end) * 0.5;
         //        NSLog(@"start:%zd, end:%zd, mid:%zd, deep:%zd, i:%zd",self.start,self.end,self.mid,self.deep,self.i);
