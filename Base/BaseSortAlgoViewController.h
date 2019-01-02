@@ -19,6 +19,8 @@
 
 static CGFloat width = 25;
 static CGFloat height = 35;
+static NSString *kStartSort = @"开始排序";
+static NSString *kFinishSort = @"结束排序";
 
 @interface BaseSortAlgoViewController : UIViewController<TAlgoProtocol>
 @property (nonatomic, strong) NSMutableArray *examples;
@@ -30,6 +32,5 @@ static CGFloat height = 35;
 @property (nonatomic, strong) UIColor *defaultBgColor;
 @property (nonatomic, strong) UIColor *defaultTextColor;
 @property (nonatomic, strong) UIFont *defaultFont;
-- (void)showBeginHud;
-- (void)showFinishHud;
+- (void)showHudWithTip:(NSString *)tip;
 @end

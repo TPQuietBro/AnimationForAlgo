@@ -31,7 +31,7 @@ static CGFloat defaultVerticalMargin = 10;
     self.end = Count - 1;
     self.mid = self.end * 0.5;
     [self sort];
-    [self showBeginHud];
+    [self showHudWithTip:kStartSort];
     [self adjustLabels];
     _tempArray = [NSMutableArray array];
     [self initEndDict];
@@ -72,7 +72,7 @@ static CGFloat defaultVerticalMargin = 10;
     // 如果到最大深度就停止
     if (self.deep == [self totalDeep]) {
         [self fireTimer];
-        [self showFinishHud];
+        [self showHudWithTip:@"分割完成,马上开始归并"];
         return;
     }
     
