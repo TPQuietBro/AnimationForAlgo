@@ -129,7 +129,8 @@ static CGFloat defaultVerticalMargin = 10;
         label.y += label.height + defaultVerticalMargin;
         return;
     }
-    NSInteger nextIndex = self.start + 1;
+    NSInteger nextIndex = self.end;
+    nextIndex ++;
     if (nextIndex > self.end) {
         nextIndex --;
     }
