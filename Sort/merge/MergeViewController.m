@@ -48,7 +48,7 @@ static CGFloat defaultVerticalMargin = 10;
     }
     _endDict = [NSMutableDictionary dictionary];
     
-    for (NSInteger i=0; i < [self totalDeep]; ++i) {
+    for (NSInteger i=0; i < DEEP; ++i) {
         
         NSInteger split = pow(2, i);
         NSMutableArray *tempArray = [NSMutableArray array];
@@ -86,16 +86,18 @@ static CGFloat defaultVerticalMargin = 10;
         return;
     }
     
+//    UILabel *label = self.labels[self.start];
     UILabel *label = self.labels[self.start];
     // 根据深度来设置间隔
     CGFloat margin = [self.margins[self.deep2] floatValue];
-    NSLog(@"start:%zd,mid:%zd,end:%zd",self.start,self.mid,self.end);
-    if (self.start > self.mid) {
-        label.x -= margin;
-    } else {
-        label.x += margin;
-    }
-    label.y += label.height + defaultVerticalMargin;
+//    NSLog(@"start:%zd,mid:%zd,end:%zd",self.start,self.mid,self.end);
+    
+//    if (self.start > self.mid) {
+//        label.x -= margin;
+//    } else {
+//        label.x += margin;
+//    }
+    [self updateFrameForLabel:label margin:margin];
     
     if (self.start == self.end) {
         self.j++;
@@ -121,14 +123,51 @@ static CGFloat defaultVerticalMargin = 10;
     }
 }
 
+- (void)updateFrameForLabel:(UILabel *)label margin:(CGFloat)margin{
+    if (self.start+1 >= Count) {
+        label.x -= margin;
+        label.y += label.height + defaultVerticalMargin;
+        return;
+    }
+    NSInteger nextIndex = self.start + 1;
+    if (nextIndex > self.end) {
+        nextIndex --;
+    }
+    
+    NSInteger sNum = label.text.integerValue;
+    NSInteger nextNum = [self.labels[nextIndex] text].integerValue;
+    
+    if (self.start < self.mid) {
+        if (sNum > nextNum) {
+            label.x += margin;
+        } else {
+            label.x -= margin;
+        }
+    } else {
+        if (sNum > nextNum) {
+            label.x += margin;
+        } else {
+            label.x -= margin;
+        }
+    }
+    
+    label.y += label.height + defaultVerticalMargin;
+}
+
+- (NSInteger)currentSplit{
+    NSArray *endIndexes = self.endDict[@(self.deep2)];
+    NSInteger split = endIndexes.count - 1;
+    return split;
+}
+
 - (void)splitWithBlock:(void(^)(void))block{
     // 如果到最大深度就停止
     
-    if (self.deep1 > [self totalDeep]) {
+    if (self.deep1 > DEEP) {
         return;
     }
     
-    if (self.deep1 == [self totalDeep]) {
+    if (self.deep1 == DEEP) {
         self.deep2 = self.deep1 - 1;
         self.deep1 ++;//++的目的是为了只赋值一次
         
